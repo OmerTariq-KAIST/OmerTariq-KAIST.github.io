@@ -1,22 +1,35 @@
-"Your Name":
+"Omer Tariq":
   bold: true
 
-"Robert White":
-  url: https://www.google.com/?q=Robert+White
+"B. Dastagir":
+  url: https://scholar.google.com/citations?user=EXAMPLE
 
-"Charles Green (MIT)":
-  name: Charles Green
-  url: https://www.google.com/?q=Charles+Green+MIT
+"M. Bilal":
+  url: https://m.bilal8@lancaster.ac.uk
 
-"Charles Green (Stanford)":
-  name: Charles Green
-  url: https://www.google.com/?q=Charles+Green+Stanford
+"D. Han":
+  name: Dongsoo Han
+  url: https://ddsshhan@kaist.ac.kr
 
-"Garrett Harris":
-  url: https://www.google.com/?q=Garrett+Harris
+"Dastagir M.B.A.":
+  url: https://scholar.google.com/citations?user=EXAMPLE2
 
-"James Wang":
-  url: https://www.google.com/?q=James+Wang
+"Y. Oh":
+  url: https://scholar.google.com/citations?user=EXAMPLE3
 
-"John Doe":
-  url: https://www.google.com/?q=John+Doe
+"M.B.A. Dastagir":
+  url: https://scholar.google.com/citations?user=EXAMPLE2
+
+"MU Hassan":
+  name: Muneeb Ul Hassan
+  url: https://muneeb.ulhassan@deakin.edu.au
+
+"J. Crowcroft":
+  name: Jon Crowcroft
+  url: https://jon.crowcroft@cl.cam.ac.uk
+
+"Al-Kuwari, S.":
+  url: https://scholar.google.com/citations?user=EXAMPLE4
+
+"Farouk, A.":
+  url: https://scholar.google.com/citations?user=EXAMPLE5

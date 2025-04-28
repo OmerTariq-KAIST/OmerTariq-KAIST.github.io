@@ -1,61 +1,81 @@
-primary_name: "Your Name"
+primary_name: "Omer Tariq"
 secondary_name: ""
-navbar_name: "Your Name"
+navbar_name: "Omer Tariq"
 
 positions:
-- logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-  name: Position 1 with logo
-- name: Position 2 without logo
+- name: Machine Learning Engineer at Monitra, UK
+- name: PhD Candidate at KAIST, South Korea
 
-
-email: "your@email.com"
+email: "omertariq2000@gmail.com"
 # cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
-github: your_github_id
-twitter: your_twitter_id  # Do not include the '@' symbol
+gscholar: "omeRtariq"  # Replace with your actual Google Scholar ID when available
+github: omertariq
+# twitter: your_twitter_id  # Do not include the '@' symbol
 # wechat_qrcode: /assets/images/etc/wechat.jpg
-# wechat_prompt: >-
-#   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
-# linkedin: your-linked-in-id
+# linkedin: omer-tariq
 # orcid: 0000-0000-0000-0000
 
-short_bio_text_justify: false
+short_bio_text_justify: true
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
+    I am a Machine Learning Engineer at Monitra, UK and a PhD Candidate at Korea Advanced Institute of Science and Technology (KAIST), South Korea, advised by Prof. Dongsoo Han.
   </p>
   <p>
-    There are various patterns of a bicolour cat. These range from the Van-patterned (colour on the crown of the head 
-    and the tail only) to a solid colour with a throat locket or medallion. Bicolour coats are found in many cat breeds, 
-    as well as being common in domestic longhair and domestic shorthair cats.
+    My research focuses on robust domain-invariant inertial localization in real-time federated edge computing. I work on foundation models, navigation & localization, hardware-aware AI, embodied AI, and zero-shot/few-shot learning.
+  </p>
+  <p>
+    I've developed AIoT-enabled inertial localization systems, deep learning-based sensor fusion frameworks, and privacy-preserving navigation solutions. My expertise spans designing lightweight transformers for TinyML-based motion tracking, neural network quantization, and real-time FPGA-based SLAM acceleration.
   </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+# portrait_caption: >-
+#   Photo by Omer Tariq (this caption is optional, comment it out to disable).
 
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
+- name: Korea Advanced Institute of Science and Technology (KAIST)
+  logo: /assets/images/badges/KAIST_logo.png
   position: >- 
-    Department of Electrical Engineering and Computer Science <br/>
-    Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+    MS & Ph.D., School of Computing <br/>
+    Thesis: Robust Domain-Invariant Inertial Localization in Real-Time Federated Edge Computing <br/>
+    CGPA: 3.73/4.3 (94%)
+  date: Nov 2021 - Present (Graduating Jul 2025)
+- name: University of Engineering and Technology, Taxila (UET)
+  logo: /assets/images/badges/UET_logo.png
+  position: >-
+    B.S., Electrical Engineering <br/>
+    Thesis: Realtime Object Detection and Autonomous Control using 3-DoF Robotic Arm
+  date: Nov 2010 - Jul 2014
 
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+experience:
+- name: Monitra
+  logo: /assets/images/badges/Monitra_logo.png
+  position: Machine Learning Engineer
+  date: Mar 2025 - Present
+- name: Intelligent Service Integration Lab @ KAIST
+  logo: /assets/images/badges/KAIST_logo.png
+  position: PhD Candidate
+  date: Oct 2022 - Present
+- name: ISI Lab @ KAIST
+  logo: /assets/images/badges/KAIST_logo.png
+  position: Teaching Assistant
+  date: Mar 2025 - Present
+- name: DAIM Lab @ KAIST
+  logo: /assets/images/badges/KAIST_logo.png
+  position: PhD Intern
+  date: Nov 2023 - Mar 2024
+- name: National Electronics Complex (NECOP)
+  logo: /assets/images/badges/NECOP_logo.png
+  position: Senior Manager
+  date: Apr 2019 - Sep 2022
+- name: National Space Agency (SUPARCO)
+  logo: /assets/images/badges/SUPARCO_logo.png
+  position: Assistant Manager
+  date: Oct 2014 - Apr 2019
 
 awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
+- name: KAIST MS/Ph.D. Scholarship (20,000 USD/year)
   date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+- name: Distinguished Service Award, SUPARCO
+  date: 2018
+- name: Distinguished Performance Award for PakTes-1A satellite launch
+  date: 2018
