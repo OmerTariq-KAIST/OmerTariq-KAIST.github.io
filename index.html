@@ -4,77 +4,95 @@ title: Home
 navbar_title: Home
 ---
 
-<!-- Hero Section -->
-<div class="hero-section position-relative mb-5">
-  <div class="row no-gutters">
+<!-- Academic Profile Section -->
+<div class="academic-profile-section position-relative mb-5">
+  <div class="row">
     <div class="col-lg-8">
-      <div class="card border-0 shadow-lg rounded-lg overflow-hidden">
+      <div class="card border-0 shadow-sm rounded-lg overflow-hidden">
         <div class="card-body p-0">
           <div class="row no-gutters">
-            <div class="col-md-5 d-flex align-items-stretch">
-              <div class="bg-gradient-primary text-white p-4 d-flex flex-column justify-content-center h-100">
-                <h1 class="font-weight-bold mb-2">Omer Tariq</h1>
-                <p class="lead mb-3">Machine Learning Engineer & PhD Candidate</p>
-                <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Daejeon, Republic of Korea</p>
-                <p class="mb-4"><i class="fas fa-university mr-2"></i> KAIST | Monitra, UK</p>
-                <div class="social-icons">
-                  <a href="mailto:{{ site.data.profile.email }}" class="text-white mr-3"><i class="fas fa-envelope fa-lg"></i></a>
-                  <a href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}" target="_blank" class="text-white mr-3"><i class="fas fa-graduation-cap fa-lg"></i></a>
-                  <a href="https://github.com/{{ site.data.profile.github }}" target="_blank" class="text-white mr-3"><i class="fab fa-github fa-lg"></i></a>
-                  <a href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin fa-lg"></i></a>
+            <div class="col-md-4 d-flex align-items-stretch">
+              <div class="bg-primary text-white p-4 d-flex flex-column justify-content-center h-100">
+                <h2 class="font-weight-bold mb-3">Omer Tariq</h2>
+                <p class="mb-3">Machine Learning Engineer & PhD Candidate</p>
+                <hr class="my-3 bg-white-50" />
+                <div class="contact-info small">
+                  <p class="mb-2"><i class="fas fa-envelope mr-2"></i> {{ site.data.profile.email }}</p>
+                  <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Daejeon, Republic of Korea</p>
+                  <p class="mb-2"><i class="fas fa-university mr-2"></i> KAIST, South Korea</p>
+                  <p class="mb-3"><i class="fas fa-building mr-2"></i> Monitra, United Kingdom</p>
+                </div>
+                <div class="academic-profile-links">
+                  <a href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}" target="_blank" class="btn btn-outline-light btn-sm mr-2 mb-2">
+                    <i class="fas fa-graduation-cap mr-1"></i> Google Scholar
+                  </a>
+                  <a href="https://github.com/{{ site.data.profile.github }}" target="_blank" class="btn btn-outline-light btn-sm mr-2 mb-2">
+                    <i class="fab fa-github mr-1"></i> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}" target="_blank" class="btn btn-outline-light btn-sm mb-2">
+                    <i class="fab fa-linkedin mr-1"></i> LinkedIn
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
-                <div class="p-4 p-lg-5">
-                  <h4 class="mb-3 text-primary border-bottom pb-2">Research Focus</h4>
-                  <div class="research-areas small">
-                    <div class="research-area mb-2">
-                      <h6 class="font-weight-bold mb-1"><i class="fas fa-brain mr-2"></i>Foundation Models</h6>
-                      <p class="mb-1">Parameter-Efficient Fine-Tuning, Retrieval-Augmented Generation, In-Context Learning, Chain-of-Thought Reasoning, Vision-Language Models (CLIP), Diffusion Models, Transformers</p>
-                    </div>
-                    <div class="research-area mb-2">
-                      <h6 class="font-weight-bold mb-1"><i class="fas fa-map-marked-alt mr-2"></i>Navigation & Localization</h6>
-                      <p class="mb-1">Neural Inertial Navigation, Visual-Inertial Odometry, End-to-End SLAM, Multi-Modal Sensor Fusion, Secure Localization, Deep Reinforcement Learning, Self-Supervised Learning</p>
-                    </div>
-                    <div class="research-area mb-2">
-                      <h6 class="font-weight-bold mb-1"><i class="fas fa-microchip mr-2"></i>Hardware-Aware AI</h6>
-                      <p class="mb-1">Neural Architecture Search, Quantization, Knowledge Distillation, AutoML, Hardware-Aware Optimization, Adversarial Robustness, Differential Privacy, Federated & Distributed Learning, FPGA/SoC Acceleration</p>
-                    </div>
-                    <div class="research-area mb-2">
-                      <h6 class="font-weight-bold mb-1"><i class="fas fa-robot mr-2"></i>Embodied AI</h6>
-                      <p class="mb-1">Vision-Language-Action Models (PaLM-E), Multimodal Perception and Control, Sim-to-Real Transfer</p>
-                    </div>
-                    <div class="research-area">
-                      <h6 class="font-weight-bold mb-1"><i class="fas fa-bolt mr-2"></i>Zero-Shot and Few-Shot Learning</h6>
-                      <p class="mb-1">Meta-Learning, Prompt Engineering, Cross-Modal Transfer, Low-Resource Adaptation, Few-Shot Prompting Techniques</p>
-                    </div>
+            <div class="col-md-8">
+              <div class="p-4">
+                <h4 class="mb-3 text-primary border-bottom pb-2">Research Interests</h4>
+                <div class="research-areas">
+                  <div class="research-area mb-3">
+                    <h6 class="font-weight-bold mb-1"><i class="fas fa-brain mr-2 text-primary"></i>Foundation Models</h6>
+                    <p class="mb-1">Parameter-Efficient Fine-Tuning, Retrieval-Augmented Generation, In-Context Learning, Chain-of-Thought Reasoning, Vision-Language Models (CLIP), Diffusion Models, Transformers</p>
+                  </div>
+                  <div class="research-area mb-3">
+                    <h6 class="font-weight-bold mb-1"><i class="fas fa-map-marked-alt mr-2 text-primary"></i>Navigation & Localization</h6>
+                    <p class="mb-1">Neural Inertial Navigation, Visual-Inertial Odometry, End-to-End SLAM, Multi-Modal Sensor Fusion, Secure Localization, Deep Reinforcement Learning, Self-Supervised Learning</p>
+                  </div>
+                  <div class="research-area mb-3">
+                    <h6 class="font-weight-bold mb-1"><i class="fas fa-microchip mr-2 text-primary"></i>Hardware-Aware AI</h6>
+                    <p class="mb-1">Neural Architecture Search, Quantization, Knowledge Distillation, AutoML, Hardware-Aware Optimization, Adversarial Robustness, Differential Privacy, Federated & Distributed Learning, FPGA/SoC Acceleration</p>
+                  </div>
+                  <div class="research-area mb-3">
+                    <h6 class="font-weight-bold mb-1"><i class="fas fa-robot mr-2 text-primary"></i>Embodied AI</h6>
+                    <p class="mb-1">Vision-Language-Action Models (PaLM-E), Multimodal Perception and Control, Sim-to-Real Transfer</p>
+                  </div>
+                  <div class="research-area">
+                    <h6 class="font-weight-bold mb-1"><i class="fas fa-bolt mr-2 text-primary"></i>Zero-Shot and Few-Shot Learning</h6>
+                    <p class="mb-1">Meta-Learning, Prompt Engineering, Cross-Modal Transfer, Low-Resource Adaptation, Few-Shot Prompting Techniques</p>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 mt-4 mt-lg-0">
-      <div class="card border-0 shadow-lg h-100">
+    
+    <!-- Education Section -->
+    <div class="col-lg-4">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-header bg-primary text-white">
+          <h4 class="m-0"><i class="fas fa-graduation-cap mr-2"></i>Education</h4>
+        </div>
         <div class="card-body">
-          <h4 class="mb-3 text-primary border-bottom pb-2">Education</h4>
-          <div class="mb-3">
+          <div class="mb-4">
             <div class="d-flex align-items-center mb-2">
               <img src="{{ '/assets/images/badges/KAIST_logo.png' | relative_url }}" alt="KAIST" class="mr-2" style="height: 30px;">
-              <h5 class="m-0">Korea Advanced Institute of Science and Technology</h5>
+              <h5 class="m-0 font-weight-bold">Korea Advanced Institute of Science and Technology</h5>
             </div>
-            <p class="text-muted mb-1">MS & Ph.D., School of Computing</p>
-            <p class="text-muted mb-0 small">CGPA: 3.73/4.3 (94%)</p>
-            <p class="text-muted mb-0 small">Nov 2021 - Present (Graduating Jul 2025)</p>
+            <p class="mb-1">MS & Ph.D., School of Computing</p>
+            <p class="mb-1">Thesis: Robust Domain-Invariant Inertial Localization in Real-Time Federated Edge Computing</p>
+            <p class="mb-1"><strong>CGPA:</strong> 3.73/4.3 (94%)</p>
+            <p class="mb-0 text-muted"><i class="far fa-calendar-alt mr-1"></i> November 2021 - Present (Graduating July 2025)</p>
+            <p class="mb-0 text-muted"><i class="fas fa-user mr-1"></i> Advisor: Prof. Dongsoo Han</p>
           </div>
           <div>
             <div class="d-flex align-items-center mb-2">
               <img src="{{ '/assets/images/badges/UET_Taxila_logo.png' | relative_url }}" alt="UET" class="mr-2" style="height: 30px;">
-              <h5 class="m-0">University of Engineering and Technology, Taxila</h5>
+              <h5 class="m-0 font-weight-bold">University of Engineering and Technology, Taxila</h5>
             </div>
-            <p class="text-muted mb-1">B.S., Electrical Engineering</p>
-            <p class="text-muted mb-0 small">Nov 2010 - Jul 2014</p>
+            <p class="mb-1">B.S., Electrical Engineering</p>
+            <p class="mb-1">Thesis: Realtime Object Detection and Autonomous Control using 3-DoF Robotic Arm</p>
+            <p class="mb-0 text-muted"><i class="far fa-calendar-alt mr-1"></i> November 2010 - July 2014</p>
           </div>
         </div>
       </div>
@@ -82,50 +100,28 @@ navbar_title: Home
   </div>
 </div>
 
-<!-- Experience Section -->
+<!-- Academic Content Section -->
 <div class="row">
+  <!-- Left Column -->
   <div class="col-lg-8">
-    <!-- Latest News -->
-    {% assign count_news = site.news | size %}
-    {% if count_news > 0 %}
-    <div class="card border-0 shadow-lg mb-5">
-      <div class="card-header bg-gradient-primary text-white border-0">
-        <h4 class="m-0"><i class="fas fa-newspaper mr-2"></i>Latest News</h4>
-      </div>
-      <div class="card-body p-0">
-        <div class="list-group list-group-flush">
-          {% assign news_items = site.news | sort: "date" | reverse | slice: 0, 5 %}
-          {% for item in news_items %}
-          <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">{{ item.title }}</h5>
-              <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    {% endif %}
-    
-    <!-- Selected Publications -->
+    <!-- Latest Publications -->
     {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
     {% if pubs.size > 0 %}
-    <div class="card border-0 shadow-lg mb-5">
-      <div class="card-header bg-gradient-primary text-white border-0">
-        <h4 class="m-0"><i class="fas fa-star mr-2"></i>Featured Publications</h4>
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-header bg-primary text-white">
+        <h4 class="m-0"><i class="fas fa-file-alt mr-2"></i>Selected Publications</h4>
       </div>
       <div class="card-body p-0">
         <div class="list-group list-group-flush">
           {% for item in pubs limit:3 %}
           <div class="list-group-item p-4">
             <div class="d-flex w-100 justify-content-between mb-2">
-              <h5 class="mb-1">{{ item.title }}</h5>
+              <h5 class="mb-1 font-weight-bold">{{ item.title }}</h5>
               <span class="badge badge-primary align-self-start">{{ item.pub_date }}</span>
             </div>
-            <p class="mb-1"><strong>{% include widgets/author_list.html authors=item.authors %}</strong></p>
+            <p class="mb-1">{% include widgets/author_list.html authors=item.authors %}</p>
             <p class="mb-3 text-muted"><em>{{ item.pub }}</em></p>
-            <p class="mb-2 small text-muted">{{ item.abstract }}</p>
+            <p class="mb-2 text-muted">{{ item.abstract }}</p>
             <div>
               {% for link in item.links %}
               {% if link[1].url %}
@@ -140,7 +136,30 @@ navbar_title: Home
         </div>
       </div>
       <div class="card-footer text-center">
-        <a href="{{ 'publications' | relative_url }}" class="btn btn-primary">View All Publications <i class="fas fa-arrow-right ml-1"></i></a>
+        <a href="{{ 'publications' | relative_url }}" class="btn btn-primary">View Complete Publication List</a>
+      </div>
+    </div>
+    {% endif %}
+    
+    <!-- Latest News -->
+    {% assign count_news = site.news | size %}
+    {% if count_news > 0 %}
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-header bg-primary text-white">
+        <h4 class="m-0"><i class="fas fa-newspaper mr-2"></i>Recent Updates</h4>
+      </div>
+      <div class="card-body p-0">
+        <div class="list-group list-group-flush">
+          {% assign news_items = site.news | sort: "date" | reverse | slice: 0, 5 %}
+          {% for item in news_items %}
+          <div class="list-group-item">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1">{{ item.title }}</h6>
+              <small class="text-muted"><i class="far fa-calendar-alt mr-1"></i>{{ item.date | date: "%B %d, %Y" }}</small>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
     {% endif %}
@@ -148,54 +167,54 @@ navbar_title: Home
   
   <!-- Right Column -->
   <div class="col-lg-4">
-    <!-- Current Position -->
-    <div class="card border-0 shadow-lg mb-5">
-      <div class="card-header bg-gradient-primary text-white border-0">
+    <!-- Current Positions -->
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-header bg-primary text-white">
         <h4 class="m-0"><i class="fas fa-briefcase mr-2"></i>Current Positions</h4>
       </div>
       <div class="card-body p-0">
         <div class="position-item p-4 border-bottom">
           <div class="d-flex align-items-center mb-2">
             <img src="{{ '/assets/images/badges/Monitra_logo.jpg' | relative_url }}" alt="Monitra" class="mr-2" style="height: 30px;">
-            <h5 class="m-0">Machine Learning Engineer</h5>
+            <h5 class="m-0 font-weight-bold">Machine Learning Engineer</h5>
           </div>
-          <p class="text-muted mb-1">Monitra, United Kingdom</p>
-          <p class="text-muted mb-2 small">March 2025 - Present</p>
-          <ul class="pl-3 mb-0 small">
-            <li>Developing secure Python scripts for Azure API authentication</li>
-            <li>Training TensorFlow models for fault classification in PRPD images</li>
-            <li>Implementing MLflow for experiment tracking and model versioning</li>
+          <p class="mb-1">Monitra, United Kingdom</p>
+          <p class="mb-2 text-muted"><i class="far fa-calendar-alt mr-1"></i>March 2025 - Present</p>
+          <ul class="pl-4 mb-0">
+            <li>Develop secure Python scripts to authenticate with Azure REST APIs and automate data ingestion from the Atlas platform</li>
+            <li>Train and export machine learning models using TensorFlow for fault type classification in PRPD images</li>
+            <li>Implement MLflow for experiment tracking and model versioning with deployment-ready architecture in CI/CD workflows</li>
           </ul>
         </div>
         
         <div class="position-item p-4">
           <div class="d-flex align-items-center mb-2">
             <img src="{{ '/assets/images/badges/KAIST_logo.png' | relative_url }}" alt="KAIST" class="mr-2" style="height: 30px;">
-            <h5 class="m-0">PhD Candidate</h5>
+            <h5 class="m-0 font-weight-bold">PhD Candidate</h5>
           </div>
-          <p class="text-muted mb-1">Intelligent Service Integration Lab, KAIST</p>
-          <p class="text-muted mb-2 small">October 2022 - Present</p>
-          <ul class="pl-3 mb-0 small">
-            <li>Developing AIoT-enabled inertial localization systems</li>
-            <li>Designing ultra-lightweight multiscale transformers</li>
-            <li>Implementing real-time FPGA-based SLAM accelerators</li>
+          <p class="mb-1">Intelligent Service Integration Lab, KAIST</p>
+          <p class="mb-2 text-muted"><i class="far fa-calendar-alt mr-1"></i>October 2022 - Present</p>
+          <ul class="pl-4 mb-0">
+            <li>Develop AIoT-enabled inertial localization systems for accurate, privacy-preserving navigation</li>
+            <li>Design NanoMST: an ultra-lightweight multiscale transformer for TinyML-based motion tracking</li>
+            <li>Implement real-time FPGA-based particle filter SLAM accelerator for mobile robot navigation</li>
           </ul>
         </div>
       </div>
     </div>
     
-    <!-- Awards -->
-    <div class="card border-0 shadow-lg mb-5">
-      <div class="card-header bg-gradient-primary text-white border-0">
+    <!-- Honors & Awards -->
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-header bg-primary text-white">
         <h4 class="m-0"><i class="fas fa-award mr-2"></i>Honors & Awards</h4>
       </div>
       <div class="card-body">
         <ul class="list-unstyled mb-0">
           {% for item in site.data.profile.awards %}
-          <li class="d-flex justify-content-between align-items-center mb-2">
+          <li class="d-flex justify-content-between align-items-center mb-3">
             <div>
               <i class="fas fa-trophy text-primary mr-2"></i>
-              {{ item.name }}
+              <span class="font-weight-medium">{{ item.name }}</span>
             </div>
             <span class="badge badge-primary">{{ item.date }}</span>
           </li>
@@ -207,48 +226,69 @@ navbar_title: Home
 </div>
 
 <style>
-.bg-gradient-primary {
-  background: linear-gradient(45deg, #1a73e8, #34a853);
-}
-
-.hero-section {
-  margin-top: -1.5rem;
-}
-
-.badge-primary {
-  background-color: #1a73e8;
-}
-
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-  background-color: #1a73e8;
-  border-color: #1a73e8;
-}
-
-.btn-outline-primary {
-  color: #1a73e8;
-  border-color: #1a73e8;
-}
-
-.btn-outline-primary:hover {
-  background-color: #1a73e8;
-  border-color: #1a73e8;
-  color: white;
+/* Academic theme styling */
+.bg-primary {
+  background-color: #0f4c81 !important;  /* Dark blue - more professional for academic site */
 }
 
 .text-primary {
-  color: #1a73e8 !important;
+  color: #0f4c81 !important;
 }
 
-.social-icons a {
+.badge-primary {
+  background-color: #0f4c81;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #0f4c81;
+  border-color: #0f4c81;
+}
+
+.btn-outline-primary {
+  color: #0f4c81;
+  border-color: #0f4c81;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0f4c81;
+  border-color: #0f4c81;
+  color: white;
+}
+
+/* Clean borders and spacing */
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   transition: all 0.3s ease;
 }
 
-.social-icons a:hover {
+.card:hover {
   transform: translateY(-3px);
-  opacity: 0.8;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-header {
+  border-bottom: none;
+  font-weight: 500;
+}
+
+/* Typography enhancements */
+body {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.font-weight-medium {
+  font-weight: 500;
 }
 
 .list-group-item {
+  border-left: none;
+  border-right: none;
   transition: all 0.2s ease;
 }
 
@@ -257,19 +297,44 @@ navbar_title: Home
 }
 
 .position-item {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .position-item:hover {
   background-color: #f8f9fa;
 }
 
-.card {
-  overflow: hidden;
-  transition: all 0.3s ease;
+.research-area h6 {
+  font-size: 0.95rem;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.research-area p {
+  font-size: 0.9rem;
+}
+
+/* Button refinements */
+.btn {
+  border-radius: 0.2rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Badge refinements */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+  border-radius: 0.2rem;
+}
+
+/* Card header height consistency */
+.card-header {
+  padding: 0.75rem 1.25rem;
+}
+
+/* Background pattern */
+body {
+  background-color: #f8f9fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e9ecef' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 </style>
