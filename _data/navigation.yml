@@ -9,3 +9,5 @@ pages:
   url: /research
 - name: Projects
   url: /projects
+- name: Showcase
+  url: /showcase
