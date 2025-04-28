@@ -3,30 +3,249 @@ layout: default
 title : Publications
 navbar_title: Publications
 body_attr: >-
-  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+  data-spy="scroll" data-target="#navbar-categories" data-offset="100"
 ---
-
-{% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
 
 <div class="row">
     <div class="col-12 col-lg-10">
-        {% for year in pubs_by_year %}
-        {% assign num_papers = year.items | size %}
-        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
+        <!-- Published Papers Section -->
+        <h2 class="pt-4" id="published">Published Papers</h2>
         <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-            {% for item in year.items %}
-                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
-            {% endfor %}
+            <!-- 1. DeepILS -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/deepils.jpg' | relative_url }}" alt="DeepILS" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">DeepILS: Towards Accurate Domain Invariant AIoT-enabled Inertial Localization System</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, B. Dastagir, M. Bilal and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Internet of Things Journal</i>, 2025</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a domain-invariant inertial localization system that maintains accuracy across diverse environments without requiring environment-specific training.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.1109/JIOT.2025.3538938">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 2. Meta-Swin -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/meta-swin.jpg' | relative_url }}" alt="Meta-Swin" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">Meta-Swin: Lightweight Image Super-Resolution Swin Transformer for Metaverse Applications</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, Dastagir M.B.A., M. Bilal, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>2nd International Conference on Intelligent Metaverse Technologies & Applications (iMETA)</i>, 2024</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper introduces a lightweight Swin Transformer for image super-resolution designed specifically for metaverse applications with constrained computational resources.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.1109/iMETA62882.2024.10807943">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 3. EmoHEAL -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/emoheal.jpg' | relative_url }}" alt="EmoHEAL" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">EmoHEAL: A Fusion-Based Framework for Emotion Recognition Using Wearable Sensors</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, Y. Oh, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>2024 IEEE SENSORS</i>, Kobe, Japan, 2024</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a multimodal fusion framework for emotion recognition using data from wearable sensors, with applications in health monitoring and affective computing.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.1109/SENSORS60989.2024.10784695">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 4. FedNav -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/fednav.jpg' | relative_url }}" alt="FedNav" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">FedNav: A Federated Learning Approach for Secure AIoT-enabled Inertial Odometry</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, M. Bilal, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>Proc. IEEE Annual Congress on AIoT</i>, Melbourne, Australia, 2024</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper introduces a federated learning framework for inertial odometry that preserves user privacy while enabling collaborative model training for improved navigation accuracy.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.1109/AIoT63253.2024.00028">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 5. Walsh-Hadamard -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/walsh-hadamard.jpg' | relative_url }}" alt="Walsh-Hadamard" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">Compact WalshHadamard Transform-Driven S-Box Design for ASIC Implementations</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, Dastagir M.B.A., and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>Electronics</i>, vol. 13, no. 16, 2024</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a novel approach to S-Box design using WalshHadamard transforms, optimized for area-efficient ASIC implementations with strong cryptographic properties.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.3390/electronics13163148">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 6. DeepIOD -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/deepiod.jpg' | relative_url }}" alt="DeepIOD" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">DeepIOD: Towards A Context-Aware IndoorOutdoor Detection Framework Using Smartphone Sensors</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, Dastagir M.B.A., and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>Sensors</i>, vol. 24, no. 16, 2024</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a context-aware framework for indoor-outdoor detection using smartphone sensors, enabling adaptive behavior in location-based applications.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.3390/s24165125">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 7. TabCLR -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/tabclr.jpg' | relative_url }}" alt="TabCLR" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">TabCLR: Contrastive Learning Representation of Tabular Data Classification for Indoor-Outdoor Detection</h5>
+                    <p class="mt-0 mb-0 small">M.B.A. Dastagir, <strong>O. Tariq</strong>, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Access</i>, 2024</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper introduces a contrastive learning approach for tabular data to improve indoor-outdoor detection accuracy using smartphone sensor data.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.1109/ACCESS.2024.3427825">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 8. Particle Filter -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/particle-filter.jpg' | relative_url }}" alt="Particle Filter" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">2D Particle Filter Accelerator for Mobile Robot Indoor Localization and Pose Estimation</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Access</i>, vol. 12, 2024</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a real-time FPGA-based accelerator for particle filter SLAM, enabling efficient indoor localization and pose estimation for mobile robots.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="https://doi.org/10.1109/ACCESS.2024.3360883">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 9. NFT Authentication -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/nft-auth.jpg' | relative_url }}" alt="NFT Authentication" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">A Smart Card-Based Approach for Privacy-Preserving Authentication of Non-Fungible Tokens Using Non-Interactive Zero Knowledge Proof</h5>
+                    <p class="mt-0 mb-0 small">M.B.A. Dastagir, <strong>O. Tariq</strong>, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>Proc. SmartWorld, UIC, ScalCom, DigitalTwin, PriComp, Meta</i>, Haikou, China, 2022</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper proposes a privacy-preserving authentication scheme for NFTs using smart cards and zero-knowledge proofs to enable secure verification without revealing sensitive information.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="#">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 10. HILO -->
+            <div class="row no-gutters">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/hilo.jpg' | relative_url }}" alt="HILO" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">HILO: High-Level and Low-Level Co-Design, Evaluation, and Acceleration of Feature Extraction for Visual-SLAM Using PYNQ Z1 Board</h5>
+                    <p class="mt-0 mb-0 small">M.B.A. Dastagir, <strong>O. Tariq</strong>, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>Proc. IPIN-WiP</i>, Beijing, China, 2022</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a co-design approach for accelerating visual SLAM feature extraction on FPGA platforms, optimizing for both high-level algorithm performance and low-level hardware efficiency.</p>
+                    <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                        <a target="_blank" href="#">[Paper]</a>
+                    </p>
+                </div>
+            </div>
         </div>
-        {% endfor %}
+        
+        <!-- Under Review Papers Section -->
+        <h2 class="pt-5" id="under-review">Papers Under Review</h2>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+            <!-- 1. Quantum Reinforcement Learning -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/quantum-rl.jpg' | relative_url }}" alt="Quantum RL" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">Quantum-Inspired Reinforcement Learning for Secure and Sustainable AIoT-Driven Supply Chain Systems</h5>
+                    <p class="mt-0 mb-0 small">Dastagir, M. B. A., <strong>O. Tariq</strong>, Al-Kuwari, S., & Farouk, A.</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Internet of Things Journal</i>, 2025 (Under Review)</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper proposes a quantum-inspired reinforcement learning approach to enhance security and sustainability in AIoT-based supply chain systems.</p>
+                </div>
+            </div>
+            
+            <!-- 2. Quantum Latent Generative -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/quantum-gen.jpg' | relative_url }}" alt="Quantum Generative" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">Quantum Latent Generative Modeling Learning for Intelligent Transportation System</h5>
+                    <p class="mt-0 mb-0 small">Dastagir, M. B. A., <strong>O. Tariq</strong>, Al-Kuwari, S., & Farouk, A.</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Intelligent Transportation Systems Transactions</i>, 2025 (Under Review)</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a quantum-enhanced generative modeling approach for intelligent transportation systems to improve traffic pattern prediction and management.</p>
+                </div>
+            </div>
+            
+            <!-- 3. NanoMST -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/nanomst.jpg' | relative_url }}" alt="NanoMST" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">NanoMST: A Hardware-Aware Multiscale Transformer Network for TinyML-Based Real-Time Inertial Motion Tracking</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Internet of Things (IoT) Journal</i>, 2025 (Under Review)</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper introduces an ultra-lightweight multiscale transformer architecture designed specifically for TinyML applications in inertial motion tracking.</p>
+                </div>
+            </div>
+            
+            <!-- 4. ConvXformer -->
+            <div class="row no-gutters border-bottom border-gray">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/convxformer.jpg' | relative_url }}" alt="ConvXformer" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">ConvXformer: Differentially Private Hybrid ConvNeXt-Transformer for Inertial Navigation</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, M. Bilal, MU Hassan, D. Han, J. Crowcroft</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Transactions on Systems, Man, and Cybernetics: Systems</i>, 2025 (Under Review)</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper presents a differentially private hybrid architecture combining ConvNeXt and Transformer models for privacy-preserving inertial navigation.</p>
+                </div>
+            </div>
+            
+            <!-- 5. TRIP -->
+            <div class="row no-gutters">
+                <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
+                    <img data-src="{{ '/assets/images/covers/trip.jpg' | relative_url }}" alt="TRIP" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+                </div>
+                <div class="col-md-9 col-xl-10 p-3 pl-md-0">
+                    <h5 class="mt-0 mb-1 font-weight-normal">TRIP: Towards Realtime Deep Inertial Odometry for Pose-Invariant Pedestrian Navigation</h5>
+                    <p class="mt-0 mb-0 small"><strong>O. Tariq</strong>, Y. Oh, and D. Han</p>
+                    <p class="mt-0 mb-0 small"><i>IEEE Transactions on Consumer Electronics</i>, 2025 (Under Review)</p>
+                    <p class="mt-0 mb-0 small text-muted">This paper introduces a real-time deep learning framework for inertial odometry that maintains accuracy regardless of device orientation, improving pedestrian navigation in challenging environments.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
-            {% endfor %}
+        <div id="navbar-categories" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            <a class="nav-link d-block" href="#published">Published</a>
+            <a class="nav-link d-block" href="#under-review">Under Review</a>
         </div>
     </div>
-
 </div>

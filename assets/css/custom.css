@@ -11,10 +11,20 @@
     --light-text: #9aa0a6;
 }
 
+/* Layout widening */
+.container-lg {
+    max-width: 1300px !important;
+}
+
+.container-xl {
+    max-width: 1500px !important;
+}
+
 /* Typography improvements */
 body {
     color: var(--dark-text);
     line-height: 1.6;
+    font-size: 1.05rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,144 +33,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-/* Card enhancements */
-.card {
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+h3 {
+    font-size: 1.75rem;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+h4 {
+    font-size: 1.5rem;
 }
 
-/* Profile section */
 .text-profile-bio {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.7;
 }
 
-/* Navigation */
-.navbar {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
-}
-
-.navbar-light .navbar-brand {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-.nav-link {
-    font-weight: 500;
-}
-
-.nav-link.active {
-    color: var(--primary-color) !important;
-}
-
-/* Badges */
-.badge-primary {
-    background-color: var(--primary-color);
-    padding: 0.4em 0.8em;
+/* Logo sizes */
+.inline-badge {
+    height: 20px !important;
+    vertical-align: -10%;
     margin-right: 5px;
-    margin-bottom: 5px;
-    font-weight: 500;
+    line-break: unset;
 }
 
-.badge-info {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.4em 0.8em;
-}
-
-.badge-success {
-    background-color: var(--secondary-color);
-}
-
-/* Publications */
-.abstract-links a {
-    color: var(--primary-color);
-    margin-right: 10px;
-    font-weight: 500;
-}
-
-/* Custom section spacing */
-.section-spacing {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--light-bg);
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-/* Button styling */
-.btn-outline-primary {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-/* Image hover effects */
-.img-hover {
-    transition: transform 0.3s ease;
-}
-
-.img-hover:hover {
-    transform: scale(1.02);
-}
-
-/* Mobile optimizations */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .section-spacing {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-}
-
-/* Skill bar for showcase */
-.skill-bar {
-    height: 10px;
-    background-color: #e9ecef;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.skill-level {
-    height: 10px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-}
-
-/* Timeline customization */
-.timeline-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.timeline-content {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.navbar-brand {
+    font-size: 1.5rem;
 }
