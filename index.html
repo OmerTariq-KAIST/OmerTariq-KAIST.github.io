@@ -1,30 +1,264 @@
 ---
 layout: default
-title : Homepage
+title: Home
 navbar_title: Home
 ---
-{% include widgets/profile_card.html %}
 
-{% include widgets/debug_repo_name.html %}
+<!-- Hero Section -->
+<div class="hero-section position-relative mb-5">
+  <div class="row no-gutters">
+    <div class="col-lg-8">
+      <div class="card border-0 shadow-lg rounded-lg overflow-hidden">
+        <div class="card-body p-0">
+          <div class="row no-gutters">
+            <div class="col-md-5 d-flex align-items-stretch">
+              <div class="bg-gradient-primary text-white p-4 d-flex flex-column justify-content-center h-100">
+                <h1 class="font-weight-bold mb-2">Omer Tariq</h1>
+                <p class="lead mb-3">Machine Learning Engineer & PhD Candidate</p>
+                <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Daejeon, Republic of Korea</p>
+                <p class="mb-4"><i class="fas fa-university mr-2"></i> KAIST | Monitra, UK</p>
+                <div class="social-icons">
+                  <a href="mailto:{{ site.data.profile.email }}" class="text-white mr-3"><i class="fas fa-envelope fa-lg"></i></a>
+                  <a href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}" target="_blank" class="text-white mr-3"><i class="fas fa-graduation-cap fa-lg"></i></a>
+                  <a href="https://github.com/{{ site.data.profile.github }}" target="_blank" class="text-white mr-3"><i class="fab fa-github fa-lg"></i></a>
+                  <a href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}" target="_blank" class="text-white mr-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="p-4 p-lg-5">
+                <h4 class="mb-3 text-primary border-bottom pb-2">Research Focus</h4>
+                <p class="text-justify">
+                  Specializing in robust domain-invariant inertial localization for real-time federated edge computing. My research spans foundation models, navigation systems, hardware-aware AI optimization, embodied AI, and zero-shot/few-shot learning techniques.
+                </p>
+                <div class="research-tags mt-3">
+                  <span class="badge badge-pill badge-primary px-3 py-2 mr-1 mb-1">Inertial Navigation</span>
+                  <span class="badge badge-pill badge-primary px-3 py-2 mr-1 mb-1">Hardware-Aware AI</span>
+                  <span class="badge badge-pill badge-primary px-3 py-2 mr-1 mb-1">Federated Learning</span>
+                  <span class="badge badge-pill badge-primary px-3 py-2 mr-1 mb-1">TinyML</span>
+                  <span class="badge badge-pill badge-primary px-3 py-2 mr-1 mb-1">Transformers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mt-4 mt-lg-0">
+      <div class="card border-0 shadow-lg h-100">
+        <div class="card-body">
+          <h4 class="mb-3 text-primary border-bottom pb-2">Education</h4>
+          <div class="mb-3">
+            <div class="d-flex align-items-center mb-2">
+              <img src="{{ '/assets/images/badges/KAIST_logo.png' | relative_url }}" alt="KAIST" class="mr-2" style="height: 30px;">
+              <h5 class="m-0">Korea Advanced Institute of Science and Technology</h5>
+            </div>
+            <p class="text-muted mb-1">MS & Ph.D., School of Computing</p>
+            <p class="text-muted mb-0 small">CGPA: 3.73/4.3 (94%)</p>
+            <p class="text-muted mb-0 small">Nov 2021 - Present (Graduating Jul 2025)</p>
+          </div>
+          <div>
+            <div class="d-flex align-items-center mb-2">
+              <img src="{{ '/assets/images/badges/UET_logo.png' | relative_url }}" alt="UET" class="mr-2" style="height: 30px;">
+              <h5 class="m-0">University of Engineering and Technology, Taxila</h5>
+            </div>
+            <p class="text-muted mb-1">B.S., Electrical Engineering</p>
+            <p class="text-muted mb-0 small">Nov 2010 - Jul 2014</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-{% include widgets/debug_url.html %}
-
-{% if site.data.display.homepage.show_experience %}
-    {% include widgets/experience_card.html %}
-{% endif %}
-
-{% if site.data.display.homepage.show_news %}
+<!-- Experience Section -->
+<div class="row">
+  <div class="col-lg-8">
+    <!-- Latest News -->
     {% assign count_news = site.news | size %}
     {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
+    <div class="card border-0 shadow-lg mb-5">
+      <div class="card-header bg-gradient-primary text-white border-0">
+        <h4 class="m-0"><i class="fas fa-newspaper mr-2"></i>Latest News</h4>
+      </div>
+      <div class="card-body p-0">
+        <div class="list-group list-group-flush">
+          {% assign news_items = site.news | sort: "date" | reverse | slice: 0, 5 %}
+          {% for item in news_items %}
+          <div class="list-group-item">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ item.title }}</h5>
+              <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
     {% endif %}
-{% endif %}
-
-{% if site.data.display.homepage.show_selected_publications %}
+    
+    <!-- Selected Publications -->
     {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-    {% 
-        include widgets/publication_card.html 
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-    %}
-{% endif %}
+    {% if pubs.size > 0 %}
+    <div class="card border-0 shadow-lg mb-5">
+      <div class="card-header bg-gradient-primary text-white border-0">
+        <h4 class="m-0"><i class="fas fa-star mr-2"></i>Featured Publications</h4>
+      </div>
+      <div class="card-body p-0">
+        <div class="list-group list-group-flush">
+          {% for item in pubs limit:3 %}
+          <div class="list-group-item p-4">
+            <div class="d-flex w-100 justify-content-between mb-2">
+              <h5 class="mb-1">{{ item.title }}</h5>
+              <span class="badge badge-primary align-self-start">{{ item.pub_date }}</span>
+            </div>
+            <p class="mb-1"><strong>{% include widgets/author_list.html authors=item.authors %}</strong></p>
+            <p class="mb-3 text-muted"><em>{{ item.pub }}</em></p>
+            <p class="mb-2 small text-muted">{{ item.abstract }}</p>
+            <div>
+              {% for link in item.links %}
+              {% if link[1].url %}
+              <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}" class="btn btn-sm btn-outline-primary mr-2">{{ link[0] }}</a>
+              {% else %}
+              <a target="_blank" href="{{ link[1] }}" class="btn btn-sm btn-outline-primary mr-2">{{ link[0] }}</a>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <a href="{{ 'publications' | relative_url }}" class="btn btn-primary">View All Publications <i class="fas fa-arrow-right ml-1"></i></a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  
+  <!-- Right Column -->
+  <div class="col-lg-4">
+    <!-- Current Position -->
+    <div class="card border-0 shadow-lg mb-5">
+      <div class="card-header bg-gradient-primary text-white border-0">
+        <h4 class="m-0"><i class="fas fa-briefcase mr-2"></i>Current Positions</h4>
+      </div>
+      <div class="card-body p-0">
+        <div class="position-item p-4 border-bottom">
+          <div class="d-flex align-items-center mb-2">
+            <img src="{{ '/assets/images/badges/Monitra_logo.png' | relative_url }}" alt="Monitra" class="mr-2" style="height: 30px;">
+            <h5 class="m-0">Machine Learning Engineer</h5>
+          </div>
+          <p class="text-muted mb-1">Monitra, United Kingdom</p>
+          <p class="text-muted mb-2 small">March 2025 - Present</p>
+          <ul class="pl-3 mb-0 small">
+            <li>Developing secure Python scripts for Azure API authentication</li>
+            <li>Training TensorFlow models for fault classification in PRPD images</li>
+            <li>Implementing MLflow for experiment tracking and model versioning</li>
+          </ul>
+        </div>
+        
+        <div class="position-item p-4">
+          <div class="d-flex align-items-center mb-2">
+            <img src="{{ '/assets/images/badges/KAIST_logo.png' | relative_url }}" alt="KAIST" class="mr-2" style="height: 30px;">
+            <h5 class="m-0">PhD Candidate</h5>
+          </div>
+          <p class="text-muted mb-1">Intelligent Service Integration Lab, KAIST</p>
+          <p class="text-muted mb-2 small">October 2022 - Present</p>
+          <ul class="pl-3 mb-0 small">
+            <li>Developing AIoT-enabled inertial localization systems</li>
+            <li>Designing ultra-lightweight multiscale transformers</li>
+            <li>Implementing real-time FPGA-based SLAM accelerators</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Awards -->
+    <div class="card border-0 shadow-lg mb-5">
+      <div class="card-header bg-gradient-primary text-white border-0">
+        <h4 class="m-0"><i class="fas fa-award mr-2"></i>Honors & Awards</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled mb-0">
+          {% for item in site.data.profile.awards %}
+          <li class="d-flex justify-content-between align-items-center mb-2">
+            <div>
+              <i class="fas fa-trophy text-primary mr-2"></i>
+              {{ item.name }}
+            </div>
+            <span class="badge badge-primary">{{ item.date }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #1a73e8, #34a853);
+}
+
+.hero-section {
+  margin-top: -1.5rem;
+}
+
+.badge-primary {
+  background-color: #1a73e8;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.btn-outline-primary {
+  color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+  color: white;
+}
+
+.text-primary {
+  color: #1a73e8 !important;
+}
+
+.social-icons a {
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+.list-group-item {
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.position-item {
+  transition: all 0.3s ease;
+}
+
+.position-item:hover {
+  background-color: #f8f9fa;
+}
+
+.card {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+</style>
