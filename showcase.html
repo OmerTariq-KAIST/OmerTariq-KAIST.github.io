@@ -1,32 +1,504 @@
 ---
 layout: default
-title : Research Showcase
+title: Research Showcase
 navbar_title: Showcase
-container_class: container-xl
+container_class: container-fluid px-4
 ---
 
-{% assign cards_by_group = site.showcase | sort: "date" | reverse | where: "show", true | group_by_exp: "item", "item.group" %}
+<div class="py-5 bg-primary text-white text-center mb-5 position-relative overflow-hidden" style="margin-top: -3rem; margin-left: -15px; margin-right: -15px;">
+    <div class="my-3">
+        <h1 class="display-4 font-weight-bold">Research Showcase</h1>
+        <p class="lead">Exploring the intersection of AI, navigation, and hardware optimization</p>
+    </div>
+    <div class="wave-bottom position-absolute w-100" style="bottom: 0; left: 0; height: 70px; overflow: hidden; line-height: 0;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: absolute; width: 100%; height: 100%; bottom: 0; transform: rotate(180deg);">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#f8f9fa" opacity=".8"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="#f8f9fa" opacity=".5"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#f8f9fa"></path>
+        </svg>
+    </div>
+</div>
 
-{% for group in cards_by_group %}
-<h2 class="mt-5 mb-4">{{ group.name }}</h2>
-<div class="row grid mb-4">
-    <div class="grid-sizer col-1"></div>
-    {% for item in group.items %}
-    {% if item.width >= 4 -%}
-        {%- assign width_sm = 12 -%}
-        {%- assign width_xs = 12 -%}
-    {%- elsif item.width >= 2 -%}
-        {%- assign width_sm = 6 -%}
-        {%- assign width_xs = 6 -%}
-    {%- else -%}
-        {%- assign width_sm = item.width | times: 2 | at_most: 12 -%}
-        {%- assign width_xs = item.width | times: 2 | at_most: 12 -%}
-    {%- endif -%}
-    <div class="p-2 grid-item col-md-{{ item.width | at_most: 12 }} col-sm-{{ width_sm }} col-{{ width_xs }}">
-        <div class="{% if item.class != null %}{{ item.class }}{% else %}card border-0 shadow-sm bg-white{% endif %}">
-            {{ item.content }}
+<div class="container">
+    <!-- Technical Skills Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg rounded-lg overflow-hidden">
+                <div class="card-header bg-gradient-primary text-white">
+                    <h3 class="mb-0"><i class="fas fa-code mr-2"></i>Technical Expertise</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="card-title">Programming & Engineering</h5>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Python (TensorFlow, PyTorch, Scikit-learn)</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-1 mt-3">
+                                    <span>FPGA Design (Verilog, SystemVerilog, UVM)</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-1 mt-3">
+                                    <span>Embedded Systems (C/C++, RTOS)</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-1 mt-3">
+                                    <span>PCB Design & Signal Integrity Analysis</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h5 class="card-title">Research & Specialization</h5>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Deep Learning & Neural Networks</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-1 mt-3">
+                                    <span>Inertial Navigation & Localization</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-1 mt-3">
+                                    <span>Hardware-Aware Model Optimization</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-1 mt-3">
+                                    <span>Federated Learning & Privacy-Preserving AI</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    {% endfor %}
+    
+    <!-- Research Focus Cards -->
+    <h2 class="text-center mb-4">Research Focus Areas</h2>
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="bg-primary text-white text-center py-3 card-img-top">
+                    <i class="fas fa-map-marked-alt fa-3x"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Neural Inertial Navigation</h4>
+                    <p class="card-text">Developing deep learning methods for robust inertial navigation across diverse environments using domain adaptation techniques.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <div class="text-center">
+                        <span class="badge badge-pill badge-primary px-3 py-2 mr-1">Sensor Fusion</span>
+                        <span class="badge badge-pill badge-primary px-3 py-2 mr-1">SLAM</span>
+                        <span class="badge badge-pill badge-primary px-3 py-2">Domain Adaptation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="bg-success text-white text-center py-3 card-img-top">
+                    <i class="fas fa-microchip fa-3x"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Hardware-Aware AI</h4>
+                    <p class="card-text">Creating efficient deep learning models for resource-constrained devices through quantization, architecture search, and knowledge distillation.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <div class="text-center">
+                        <span class="badge badge-pill badge-success px-3 py-2 mr-1">TinyML</span>
+                        <span class="badge badge-pill badge-success px-3 py-2 mr-1">Quantization</span>
+                        <span class="badge badge-pill badge-success px-3 py-2">FPGA Acceleration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="bg-info text-white text-center py-3 card-img-top">
+                    <i class="fas fa-shield-alt fa-3x"></i>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Privacy-Preserving AI</h4>
+                    <p class="card-text">Exploring differential privacy and federated learning approaches to protect user data while enabling collaborative model training.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <div class="text-center">
+                        <span class="badge badge-pill badge-info px-3 py-2 mr-1">Federated Learning</span>
+                        <span class="badge badge-pill badge-info px-3 py-2 mr-1">Differential Privacy</span>
+                        <span class="badge badge-pill badge-info px-3 py-2">Edge Computing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Publications Highlights -->
+    <h2 class="text-center mb-4">Featured Publications</h2>
+    <div class="row mb-5">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">DeepILS: Towards Accurate Domain Invariant AIoT-enabled Inertial Localization System</h4>
+                    <p class="card-subtitle mb-2 text-muted"><strong>Omer Tariq</strong>, B. Dastagir, M. Bilal, D. Han</p>
+                    <p class="card-text">A domain-invariant inertial localization system that maintains accuracy across diverse environments without environment-specific training.</p>
+                    <p class="mb-0"><span class="badge badge-primary">IEEE Internet of Things Journal</span> <span class="badge badge-secondary">2025</span></p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <a href="https://doi.org/10.1109/JIOT.2025.3538938" target="_blank" class="btn btn-sm btn-outline-primary">View Paper</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">Meta-Swin: Lightweight Image Super-Resolution Swin Transformer for Metaverse Applications</h4>
+                    <p class="card-subtitle mb-2 text-muted"><strong>Omer Tariq</strong>, Dastagir M.B.A., M. Bilal, D. Han</p>
+                    <p class="card-text">A lightweight Swin Transformer for image super-resolution designed specifically for metaverse applications with constrained computing resources.</p>
+                    <p class="mb-0"><span class="badge badge-primary">iMETA Conference</span> <span class="badge badge-secondary">2024</span></p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <a href="https://doi.org/10.1109/iMETA62882.2024.10807943" target="_blank" class="btn btn-sm btn-outline-primary">View Paper</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Professional Timeline -->
+    <h2 class="text-center mb-4">Professional Journey</h2>
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg rounded-lg">
+                <div class="card-body p-0">
+                    <div class="timeline-container py-4">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-block">
+                            <div class="timeline-icon bg-primary">
+                                <i class="fas fa-briefcase text-white"></i>
+                            </div>
+                            <div class="timeline-content shadow-sm">
+                                <h5>Machine Learning Engineer</h5>
+                                <p class="text-muted">Monitra, UK (Mar 2025 - Present)</p>
+                                <p>Developing ML pipelines for fault detection in PRPD images with Azure integration</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-block">
+                            <div class="timeline-icon bg-info">
+                                <i class="fas fa-chalkboard-teacher text-white"></i>
+                            </div>
+                            <div class="timeline-content shadow-sm">
+                                <h5>Teaching Assistant</h5>
+                                <p class="text-muted">ISI Lab @ KAIST (Mar 2025 - Present)</p>
+                                <p>Assisting graduate students in Special Topics in Computer Science (CS492)</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-block">
+                            <div class="timeline-icon bg-info">
+                                <i class="fas fa-laptop-code text-white"></i>
+                            </div>
+                            <div class="timeline-content shadow-sm">
+                                <h5>PhD Intern</h5>
+                                <p class="text-muted">DAIM Lab @ KAIST (Nov 2023 - Mar 2024)</p>
+                                <p>Developed industrial autonomous mobile robot with SLAM-based navigation</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-block">
+                            <div class="timeline-icon bg-success">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div class="timeline-content shadow-sm">
+                                <h5>PhD Candidate</h5>
+                                <p class="text-muted">KAIST, South Korea (Nov 2021 - Present)</p>
+                                <p>Researching inertial localization, sensor fusion, and privacy-preserving navigation</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 5 -->
+                        <div class="timeline-block">
+                            <div class="timeline-icon bg-primary">
+                                <i class="fas fa-microchip text-white"></i>
+                            </div>
+                            <div class="timeline-content shadow-sm">
+                                <h5>Senior Manager</h5>
+                                <p class="text-muted">NECOP, Pakistan (Apr 2019 - Sep 2022)</p>
+                                <p>Led SoC/RTL verification and digital IC design optimization</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 6 -->
+                        <div class="timeline-block">
+                            <div class="timeline-icon bg-primary">
+                                <i class="fas fa-satellite text-white"></i>
+                            </div>
+                            <div class="timeline-content shadow-sm">
+                                <h5>Assistant Manager</h5>
+                                <p class="text-muted">SUPARCO, Pakistan (Oct 2014 - Apr 2019)</p>
+                                <p>Designed satellite payloads and high-speed PCBs for space applications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Certifications -->
+    <h2 class="text-center mb-4">Professional Certifications</h2>
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Certification 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="certification-card text-center p-4 h-100 border rounded">
+                                <div class="cert-icon mb-3">
+                                    <i class="fas fa-microchip fa-3x text-primary"></i>
+                                </div>
+                                <h5>Op-Amp Layout Design (180nm BCD)</h5>
+                                <p class="mb-2">LUMS, Pakistan</p>
+                                <div class="cert-year badge badge-primary px-3 py-2">2021</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certification 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="certification-card text-center p-4 h-100 border rounded">
+                                <div class="cert-icon mb-3">
+                                    <i class="fas fa-brain fa-3x text-primary"></i>
+                                </div>
+                                <h5>Machine Learning</h5>
+                                <p class="mb-2">Stanford University (Coursera)</p>
+                                <div class="cert-year badge badge-primary px-3 py-2">2020</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Certification 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="certification-card text-center p-4 h-100 border rounded">
+                                <div class="cert-icon mb-3">
+                                    <i class="fas fa-microchip fa-3x text-primary"></i>
+                                </div>
+                                <h5>SoC Verification</h5>
+                                <p class="mb-2">Udemy</p>
+                                <div class="cert-year badge badge-primary px-3 py-2">2021</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional certifications can be shown upon hover or click -->
+                        <div class="col-12 text-center mt-3">
+                            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#moreCertifications" aria-expanded="false" aria-controls="moreCertifications">
+                                View More Certifications <i class="fas fa-chevron-down ml-1"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="collapse mt-4 w-100" id="moreCertifications">
+                            <div class="row">
+                                <!-- Certification 4 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="certification-card text-center p-4 h-100 border rounded">
+                                        <div class="cert-icon mb-3">
+                                            <i class="fas fa-wave-square fa-3x text-primary"></i>
+                                        </div>
+                                        <h5>Digital Signal Processing</h5>
+                                        <p class="mb-2">EPFL (Coursera)</p>
+                                        <div class="cert-year badge badge-primary px-3 py-2">2013</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Certification 5 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="certification-card text-center p-4 h-100 border rounded">
+                                        <div class="cert-icon mb-3">
+                                            <i class="fas fa-network-wired fa-3x text-primary"></i>
+                                        </div>
+                                        <h5>Advanced Computer Networks</h5>
+                                        <p class="mb-2">University of Washington (Coursera)</p>
+                                        <div class="cert-year badge badge-primary px-3 py-2">2013</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Certification 6 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="certification-card text-center p-4 h-100 border rounded">
+                                        <div class="cert-icon mb-3">
+                                            <i class="fas fa-robot fa-3x text-primary"></i>
+                                        </div>
+                                        <h5>Control of Mobile Robots</h5>
+                                        <p class="mb-2">Georgia Tech (Coursera)</p>
+                                        <div class="cert-year badge badge-primary px-3 py-2">2013</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-{% endfor %}
+
+<style>
+/* Enhanced timeline styling */
+.timeline-container {
+    position: relative;
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    width: 4px;
+    background: #e9ecef;
+}
+
+.timeline-block {
+    position: relative;
+    margin: 2em 0;
+}
+
+.timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 30px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-content {
+    position: relative;
+    margin-left: 90px;
+    background: white;
+    border-radius: 0.25em;
+    padding: 1.5em;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 10px solid transparent;
+    border-right: 10px solid white;
+}
+
+/* Card hover effects */
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+/* Certification cards */
+.certification-card {
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+    border-color: var(--primary-color)!important;
+}
+
+/* Progress bar animation */
+.progress-bar {
+    transition: width 1.5s ease-in-out;
+}
+
+/* Wave background for header */
+.bg-gradient-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+</style>
+
+<script>
+$(document).ready(function() {
+    // Animate progress bars on page load
+    $('.progress-bar').each(function() {
+        var width = $(this).attr('aria-valuenow') + '%';
+        $(this).css('width', '0%').animate({width: width}, 1500);
+    });
+    
+    // Add scroll animation for timeline items
+    function revealTimeline() {
+        $('.timeline-block').each(function() {
+            if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.8) {
+                $(this).addClass('animated fadeInUp');
+            }
+        });
+    }
+    
+    // Initial check
+    revealTimeline();
+    
+    // Check on scroll
+    $(window).on('scroll', function() {
+        revealTimeline();
+    });
+});
+</script>
