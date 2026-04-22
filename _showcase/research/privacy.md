@@ -7,9 +7,9 @@ group: Research Focus
 <div>
   <img data-src="/assets/images/research/privacy.png" class="lazy w-100 rounded-top" src="/assets/images/empty_300x200.png">
   <div class="card-body">
-    <h5 class="card-title">Privacy-Preserving AI</h5>
+    <h5 class="card-title">VLA Models &amp; Privacy-Preserving AI</h5>
     <p class="card-text">
-      My work explores differential privacy and federated learning approaches to protect user data while enabling collaborative model training, particularly important for location-based and sensor applications.
+      Vision-Language-Action models for grounded embodied autonomy; knowledge distillation to edge-deployable VLAs (4× compression, 97% accuracy). Complemented by differential privacy and federated learning for secure distributed sensing.
     </p>
   </div>
 </div>

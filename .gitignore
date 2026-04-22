@@ -8,3 +8,6 @@ vendor/
 Gemfile.lock
 
 .DS_Store
+
+# Private CV source files
+CV/

@@ -3,79 +3,78 @@ secondary_name: ""
 navbar_name: "Omer Tariq"
 
 positions:
-- name: Machine Learning Engineer at Monitra, UK
-- name: PhD Candidate at KAIST, South Korea
+- name: Research Scientist (3D Perception & Embodied AI) at Neubility, Seoul
+- name: Ph.D. Computer Science, KAIST (2025)
 
 email: "omertariq2000@gmail.com"
 cv_link: https://drive.google.com/file/d/1BHKyxjVB2ObCS60mPjgioRdGpK_HZNZM/view?usp=sharing
-gscholar: "Omer Tariq"  # Replace with your actual Google Scholar ID when available
+gscholar: "K_nyOvkAAAAJ"
 github: OmerTariq-KAIST
-# twitter: your_twitter_id  # Do not include the '@' symbol
-# wechat_qrcode: /assets/images/etc/wechat.jpg
 linkedin: omer-tariq-k2021
 orcid: 0000-0002-1771-6166
 
 short_bio_text_justify: true
 short_bio: >-
   <p>
-    I am a Machine Learning Engineer at Monitra, UK and a PhD Candidate at Korea Advanced Institute of Science and Technology (KAIST), South Korea, advised by Prof. Dongsoo Han.
+    I am a <strong>Research Scientist at <a href="https://www.neubility.co.kr/en" target="_blank">Neubility</a></strong> (Seoul), working on multimodal embodied AI and 3D perception for autonomous mobile robots. I hold a <strong>Ph.D. in Computer Science from KAIST</strong> (2025), advised by Prof. Dongsoo Han.
   </p>
   <p>
-    My research focuses on robust domain-invariant inertial localization in real-time federated edge computing. I work on foundation models, navigation & localization, hardware-aware AI, embodied AI, and zero-shot/few-shot learning.
+    My work spans <strong>multi-camera 3D perception</strong> (BEV/occupancy modeling, monocular depth estimation, multi-sensor fusion), <strong>Vision-Language-Action models</strong>, and <strong>efficient edge deployment</strong> on NVIDIA Jetson Orin via TensorRT and INT8/FP16 quantization. I build production-grade perception systems that run in under 30&thinsp;ms end-to-end on a single SoC.
   </p>
   <p>
-    I've developed AIoT-enabled inertial localization systems, deep learning-based sensor fusion frameworks, and privacy-preserving navigation solutions. My expertise spans designing lightweight transformers for TinyML-based motion tracking, neural network quantization, and real-time FPGA-based SLAM acceleration.
+    Previously, I was a Machine Learning Engineer at <strong>Monitra (UK)</strong> and a PhD researcher at KAIST's Intelligent Service Integration Lab, where I designed neural inertial navigation architectures, privacy-preserving federated learning systems, and FPGA-based SLAM accelerators.
   </p>
 
-portrait_url: /assets/images/photos/portrait.jpg
-# portrait_caption: >-
-#   Photo by Omer Tariq (this caption is optional, comment it out to disable).
+portrait_url: /assets/images/photos/Omer.jpg
 
 education:
 - name: Korea Advanced Institute of Science and Technology (KAIST)
   logo: /assets/images/badges/KAIST_logo.png
-  position: >- 
+  position: >-
     MS & Ph.D., School of Computing <br/>
     Thesis: Robust Domain-Invariant Inertial Localization in Real-Time Federated Edge Computing <br/>
-    CGPA: 3.73/4.3 (94%)
-  date: Nov 2021 - Present (Graduating Jul 2025)
+    Advisor: Prof. Dongsoo Han &nbsp;|&nbsp; CGPA: 3.73/4.3 (94%)
+  date: Aug 2021 – Jun 2025
 - name: University of Engineering and Technology, Taxila (UET)
   logo: /assets/images/badges/UET_Taxila_logo.png
   position: >-
     B.S., Electrical Engineering <br/>
     Thesis: Realtime Object Detection and Autonomous Control using 3-DoF Robotic Arm
-  date: Nov 2010 - Jul 2014
+  date: Nov 2010 – Jul 2014
 
 experience:
-- name: Monitra
+- name: Neubility
+  position: Research Scientist — Multimodal Embodied AI & 3D Perception
+  date: Aug 2025 – Present
+- name: Monitra, United Kingdom
   logo: /assets/images/badges/Monitra_logo.jpg
-  position: Machine Learning Engineer
-  date: Mar 2025 - Present
+  position: Machine Learning Engineer — MLOps | Computer Vision
+  date: Feb 2025 – Sep 2025
 - name: Intelligent Service Integration Lab @ KAIST
   logo: /assets/images/badges/KAIST_logo.png
-  position: PhD Candidate
-  date: Oct 2022 - Present
+  position: PhD Candidate — Autonomous Navigation | Privacy-Preserving ML
+  date: Aug 2021 – Jun 2025
 - name: ISI Lab @ KAIST
   logo: /assets/images/badges/KAIST_logo.png
-  position: Teaching Assistant
-  date: Mar 2025 - Present
+  position: Teaching Assistant — CS492 Special Topics in Computer Science
+  date: Mar 2025 – Jun 2025
 - name: DAIM Lab @ KAIST
   logo: /assets/images/badges/KAIST_logo.png
-  position: PhD Intern
-  date: Nov 2023 - Mar 2024
+  position: Research Intern — Mobile Robotics | SLAM | Multi-Sensor Fusion
+  date: Nov 2023 – Mar 2024
 - name: National Electronics Complex (NECOP)
   logo: /assets/images/badges/Necop_logo.png
-  position: Senior Manager
-  date: Apr 2019 - Sep 2022
+  position: Senior Manager — SoC Design | FPGA | AI Accelerators
+  date: Apr 2019 – May 2022
 - name: National Space Agency (SUPARCO)
   logo: /assets/images/badges/SUPARCO_logo.png
-  position: Assistant Manager
-  date: Oct 2014 - Apr 2019
+  position: Assistant Manager — Satellite Systems | FPGA | Signal Processing
+  date: Oct 2014 – Apr 2019
 
 awards:
-- name: KAIST MS/Ph.D. Scholarship (20,000 USD/year)
+- name: KAIST MS/Ph.D. Full Scholarship (20,000 USD/year)
   date: 2021
 - name: Distinguished Service Award, SUPARCO
   date: 2018
-- name: Distinguished Performance Award for PakTes-1A satellite launch
+- name: Distinguished Performance Award — PakTes-1A satellite launch
   date: 2018

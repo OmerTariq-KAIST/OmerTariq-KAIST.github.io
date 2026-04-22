@@ -7,28 +7,29 @@ group: Publications Highlights
 <div class="p-4">
     <h4>Featured Publications</h4>
     <hr />
-    
+
+    <div class="mb-3">
+        <h5>ADP-QFed: Privacy-Preserving Quantized Federated Learning for Intelligent Edge Sensing in IoT Systems</h5>
+        <p class="small"><strong>Omer Tariq</strong>, M. Bilal, D. Han</p>
+        <p class="small"><em>IEEE Internet of Things Journal</em>, 2025 &nbsp;<span class="badge badge-primary badge-pill">IF: 8.9</span></p>
+        <p class="text-muted small">Combines adaptive differential privacy with quantized federated learning for privacy-preserving distributed edge intelligence in IoT systems.</p>
+        <a href="https://doi.org/10.1109/JIOT.2025.3634475" target="_blank" class="btn btn-sm btn-outline-primary">Paper</a>
+    </div>
+
+    <div class="mb-3">
+        <h5>NanoMST: A Hardware-Aware Multiscale Transformer for TinyML-Based Real-Time Inertial Motion Tracking</h5>
+        <p class="small"><strong>Omer Tariq</strong>, D. Han</p>
+        <p class="small"><em>IEEE Internet of Things Journal</em>, 2025 &nbsp;<span class="badge badge-primary badge-pill">IF: 8.9</span></p>
+        <p class="text-muted small">298K-parameter multiscale transformer achieving 4.7× compute reduction over LSTM with 8-bit quantization for TinyML deployment.</p>
+        <a href="https://doi.org/10.1109/JIOT.2025.3583906" target="_blank" class="btn btn-sm btn-outline-primary">Paper</a>
+    </div>
+
     <div class="mb-3">
         <h5>DeepILS: Towards Accurate Domain Invariant AIoT-enabled Inertial Localization System</h5>
         <p class="small"><strong>Omer Tariq</strong>, B. Dastagir, M. Bilal, D. Han</p>
-        <p class="small"><em>IEEE Internet of Things Journal</em>, 2025</p>
-        <p class="text-muted small">This paper presents a domain-invariant inertial localization system that maintains accuracy across diverse environments without requiring environment-specific training.</p>
+        <p class="small"><em>IEEE Internet of Things Journal</em>, 2025 &nbsp;<span class="badge badge-primary badge-pill">IF: 8.9</span></p>
+        <p class="text-muted small">Domain-invariant inertial localization achieving sub-meter accuracy across diverse environments without environment-specific retraining.</p>
         <a href="https://doi.org/10.1109/JIOT.2025.3538938" target="_blank" class="btn btn-sm btn-outline-primary">Paper</a>
-    </div>
-    
-    <div class="mb-3">
-        <h5>Meta-Swin: Lightweight Image Super-Resolution Swin Transformer for Metaverse Applications</h5>
-        <p class="small"><strong>Omer Tariq</strong>, Dastagir M.B.A., M. Bilal, D. Han</p>
-        <p class="small"><em>2nd International Conference on Intelligent Metaverse Technologies & Applications (iMETA)</em>, 2024</p>
-        <p class="text-muted small">This paper introduces a lightweight Swin Transformer for image super-resolution designed specifically for metaverse applications with constrained computational resources.</p>
-        <a href="https://doi.org/10.1109/iMETA62882.2024.10807943" target="_blank" class="btn btn-sm btn-outline-primary">Paper</a>
-    </div>
-    
-    <div class="mb-3">
-        <h5>EmoHEAL: A Fusion-Based Framework for Emotion Recognition Using Wearable Sensors</h5>
-        <p class="small"><strong>Omer Tariq</strong>, Y. Oh, D. Han</p>
-        <p class="small"><em>IEEE SENSORS</em>, 2024</p>
-        <p class="text-muted small">This paper presents a multimodal fusion framework for emotion recognition using data from wearable sensors, with applications in health monitoring and affective computing.</p>
-        <a href="https://doi.org/10.1109/SENSORS60989.2024.10784695" target="_blank" class="btn btn-sm btn-outline-primary">Paper</a>
+        <a href="https://github.com/OmerTariq-KAIST/DeepILS-IoT-Journal-2025" target="_blank" class="btn btn-sm btn-outline-secondary ml-1">Code</a>
     </div>
 </div>

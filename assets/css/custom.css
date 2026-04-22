@@ -1,14 +1,15 @@
 /* Custom styles for Omer Tariq's website */
 
-/* Primary colors */
+/* Primary colors — deep navy, professional academic/research tone */
 :root {
-    --primary-color: #1a73e8;
-    --secondary-color: #34a853;
-    --accent-color: #ea4335;
-    --light-bg: #f8f9fa;
-    --dark-text: #202124;
-    --medium-text: #5f6368;
-    --light-text: #9aa0a6;
+    --primary-color: #19375f;
+    --primary-hover: #122848;
+    --secondary-color: #2a7a4b;
+    --accent-color: #c0392b;
+    --light-bg: #f4f6f9;
+    --dark-text: #1a1a2e;
+    --medium-text: #4a4a6a;
+    --light-text: #8a8aaa;
 }
 
 /* Layout widening */
