@@ -57,16 +57,31 @@ navbar_title: Home
         <em>embodied AI</em>, and <em>efficient edge deployment</em>.
       </p>
 
-      <!-- Education badges -->
-      <div class="edu-badges mt-3">
-        <span class="edu-badge">
-          <img src="{{ '/assets/images/badges/KAIST_logo.png' | relative_url }}" alt="KAIST">
-          Ph.D. CS &mdash; KAIST (2025)
-        </span>
-        <span class="edu-badge">
-          <img src="{{ '/assets/images/badges/UET_Taxila_logo.png' | relative_url }}" alt="UET">
-          B.S. EE &mdash; UET Taxila (2014)
-        </span>
+      <!-- Citation metrics -->
+      <div class="stat-row">
+        <div class="stat-item">
+          <div class="stat-value">16+</div>
+          <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">69</div>
+          <div class="stat-label">Citations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">5</div>
+          <div class="stat-label">h-index</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">1</div>
+          <div class="stat-label">ICML poster</div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="edu-line">
+        <span class="edu-item"><img src="{{ '/assets/images/badges/KAIST_logo.png' | relative_url }}" alt="KAIST">Ph.D. CS, KAIST (2025)</span>
+        <span class="sep">&middot;</span>
+        <span class="edu-item"><img src="{{ '/assets/images/badges/UET_Taxila_logo.png' | relative_url }}" alt="UET">B.S. EE, UET Taxila (2014)</span>
       </div>
     </div>
 
@@ -126,7 +141,7 @@ navbar_title: Home
         </div>
       </div>
       {% endfor %}
-      <p class="mt-3"><a href="{{ 'publications' | relative_url }}" class="btn btn-sm btn-outline-primary">View all 15+ publications &rarr;</a></p>
+      <p class="mt-3"><a href="{{ 'publications' | relative_url }}" class="btn-minimal">View all publications &rarr;</a></p>
     </section>
     {% endif %}
 
@@ -160,199 +175,3 @@ navbar_title: Home
 
   </div>
 </div>
-
-<style>
-/* ── Profile ──────────────────────────────────────────────────────────── */
-.profile-photo {
-  width: 180px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.15);
-  display: block;
-  margin: 0 auto;
-}
-
-.profile-links {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: 0.5rem;
-}
-
-.profile-link {
-  display: block;
-  font-size: 0.82rem;
-  color: #19375f;
-  text-decoration: none;
-  padding: 2px 0;
-}
-.profile-link:hover { text-decoration: underline; color: #122848; }
-.profile-link i { width: 16px; text-align: center; margin-right: 4px; }
-
-.profile-name {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.15rem;
-  color: #111;
-}
-
-.profile-title {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 0.9rem;
-  line-height: 1.5;
-}
-.profile-title a { color: #19375f; font-weight: 600; }
-
-.profile-bio {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 0.7rem;
-}
-.profile-bio a { color: #19375f; }
-.profile-bio strong { color: #111; }
-
-/* Education badges */
-.edu-badges { display: flex; flex-wrap: wrap; gap: 8px; }
-.edu-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  color: #444;
-  background: #f0f3f7;
-  border: 1px solid #dde2ea;
-  border-radius: 3px;
-  padding: 4px 10px;
-}
-.edu-badge img { height: 18px; width: auto; }
-
-/* ── Sections ─────────────────────────────────────────────────────────── */
-.site-section { border-top: 2px solid #19375f; padding-top: 0.8rem; }
-
-.section-heading {
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #19375f;
-  margin-bottom: 0.6rem;
-}
-
-.section-note {
-  font-size: 0.82rem;
-  color: #666;
-  margin-bottom: 0.9rem;
-}
-
-/* ── News table ───────────────────────────────────────────────────────── */
-.news-table { width: 100%; border-collapse: collapse; }
-.news-table tr { border-bottom: 1px solid #eee; }
-.news-table tr:last-child { border-bottom: none; }
-.news-date {
-  font-size: 0.8rem;
-  white-space: nowrap;
-  padding: 6px 12px 6px 0;
-  vertical-align: top;
-  min-width: 70px;
-  color: #888;
-  font-variant-numeric: tabular-nums;
-}
-.news-text {
-  font-size: 0.88rem;
-  padding: 6px 0;
-  color: #333;
-  line-height: 1.5;
-}
-
-/* ── Publication items ────────────────────────────────────────────────── */
-.pub-item {
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
-}
-.pub-item:last-of-type { border-bottom: none; }
-
-.pub-title {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #111;
-  line-height: 1.45;
-  margin-bottom: 3px;
-}
-
-.pub-authors {
-  font-size: 0.82rem;
-  color: #555;
-  margin-bottom: 2px;
-}
-
-.pub-venue {
-  font-size: 0.82rem;
-  color: #19375f;
-  margin-bottom: 4px;
-}
-
-.pub-abstract {
-  font-size: 0.8rem;
-  color: #666;
-  line-height: 1.5;
-  margin-bottom: 4px;
-}
-
-.pub-links { display: flex; gap: 8px; flex-wrap: wrap; }
-.pub-link {
-  font-size: 0.78rem;
-  color: #19375f;
-  border: 1px solid #19375f;
-  border-radius: 3px;
-  padding: 1px 8px;
-  text-decoration: none;
-  transition: background 0.15s, color 0.15s;
-}
-.pub-link:hover { background: #19375f; color: #fff; text-decoration: none; }
-
-/* ── Side sections ────────────────────────────────────────────────────── */
-.honors-list, .service-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.honors-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  font-size: 0.85rem;
-  padding: 5px 0;
-  border-bottom: 1px solid #f0f0f0;
-  gap: 8px;
-}
-.honor-name { color: #333; }
-.honor-year {
-  font-size: 0.78rem;
-  color: #888;
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-
-.service-list li {
-  font-size: 0.83rem;
-  color: #444;
-  padding: 3px 0;
-}
-
-/* ── Buttons ──────────────────────────────────────────────────────────── */
-.btn-outline-primary {
-  color: #19375f;
-  border-color: #19375f;
-  font-size: 0.82rem;
-}
-.btn-outline-primary:hover {
-  background: #19375f;
-  color: #fff;
-}
-
-/* ── Page background ──────────────────────────────────────────────────── */
-body { background-color: #fff; }
-</style>

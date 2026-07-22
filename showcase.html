@@ -1,402 +1,130 @@
 ---
 layout: default
-title: Research Showcase
+title: Showcase
 navbar_title: Showcase
-container_class: container-fluid px-4
 ---
 
-<div class="py-5 bg-primary text-white text-center mb-5 position-relative overflow-hidden" style="margin-top: -3rem; margin-left: -15px; margin-right: -15px;">
-    <div class="my-3">
-        <h1 class="display-4 font-weight-bold">Research Showcase</h1>
-        <p class="lead">3D Perception · Embodied AI · Efficient Edge Deployment</p>
+<div class="page-header">
+    <div class="page-kicker">Showcase</div>
+    <h1>Skills &amp; Career Timeline</h1>
+    <p class="page-lede">
+        A visual summary of my technical range and career history. For papers, see
+        <a href="{{ 'publications' | relative_url }}">Publications</a>; for write-ups, see
+        <a href="{{ 'projects' | relative_url }}">Projects</a>.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-12 col-lg-6">
+        <section class="site-section mb-5">
+            <h2 class="section-heading">Programming &amp; Engineering</h2>
+            <div class="skill-group">
+                <div class="skill-tags">
+                    Python (PyTorch, TensorFlow, HuggingFace)<span class="sep">&middot;</span>TensorRT, ONNX, INT8/FP16 Quantization<span class="sep">&middot;</span>NVIDIA Jetson / CUDA / Edge Deployment<span class="sep">&middot;</span>FPGA Design (Verilog, SystemVerilog, HLS)<span class="sep">&middot;</span>C/C++<span class="sep">&middot;</span>MATLAB
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="wave-bottom position-absolute w-100" style="bottom: 0; left: 0; height: 70px; overflow: hidden; line-height: 0;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: absolute; width: 100%; height: 100%; bottom: 0; transform: rotate(180deg);">
-            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#f4f6f9" opacity=".8"></path>
-            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="#f4f6f9" opacity=".5"></path>
-            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#f4f6f9"></path>
-        </svg>
+
+    <div class="col-12 col-lg-6">
+        <section class="site-section mb-5">
+            <h2 class="section-heading">Research &amp; Specialization</h2>
+            <div class="skill-group">
+                <div class="skill-tags">
+                    3D Perception &amp; BEV Architectures<span class="sep">&middot;</span>Multi-Sensor Fusion (Camera, LiDAR, Radar, IMU)<span class="sep">&middot;</span>Vision-Language-Action Models<span class="sep">&middot;</span>Federated Learning &amp; Differential Privacy<span class="sep">&middot;</span>Knowledge Distillation &amp; LoRA/PEFT
+                </div>
+            </div>
+        </section>
     </div>
 </div>
 
-<div class="container">
-    <!-- Technical Skills Section -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card border-0 shadow-lg rounded-lg overflow-hidden">
-                <div class="card-header bg-gradient-primary text-white">
-                    <h3 class="mb-0"><i class="fas fa-code mr-2"></i>Technical Expertise</h3>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5 class="card-title">Programming &amp; Engineering</h5>
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between mb-1">
-                                    <span>Python (PyTorch, TensorFlow, HuggingFace)</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+<section class="site-section mb-5">
+    <h2 class="section-heading">Career Timeline</h2>
+    <div class="mtimeline">
 
-                                <div class="d-flex justify-content-between mb-1 mt-3">
-                                    <span>TensorRT, ONNX, INT8/FP16 Quantization</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-1 mt-3">
-                                    <span>NVIDIA Jetson / CUDA / Edge Deployment</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-1 mt-3">
-                                    <span>FPGA Design (Verilog, SystemVerilog, HLS)</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <h5 class="card-title">Research &amp; Specialization</h5>
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between mb-1">
-                                    <span>3D Perception &amp; BEV Architectures</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-1 mt-3">
-                                    <span>Multi-Sensor Fusion (Camera, LiDAR, Radar, IMU)</span>
-                                    <span>92%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-1 mt-3">
-                                    <span>Vision-Language-Action Models</span>
-                                    <span>88%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-
-                                <div class="d-flex justify-content-between mb-1 mt-3">
-                                    <span>Federated Learning &amp; Differential Privacy</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="mtimeline-item">
+            <div class="entry-title">Research Scientist &mdash; Embodied AI &amp; 3D Perception</div>
+            <span class="entry-meta"><a href="https://www.neubility.co.kr/en" target="_blank">Neubility</a>, Seoul &middot; Aug 2025 &ndash; Present</span>
+            <p class="entry-body">Multi-camera 3D perception; 8&times; inference speedup via TensorRT INT8/FP16; VLA policy validation in Isaac Sim &amp; CARLA.</p>
         </div>
+
+        <div class="mtimeline-item">
+            <div class="entry-title">Machine Learning Engineer &mdash; MLOps &amp; Computer Vision</div>
+            <span class="entry-meta">Monitra, United Kingdom &middot; Feb 2025 &ndash; Sep 2025</span>
+            <p class="entry-body">15% robustness gain + 8&times; throughput; Azure Kubernetes MLOps pipeline; diffusion-model data augmentation.</p>
+        </div>
+
+        <div class="mtimeline-item">
+            <div class="entry-title">Ph.D. Researcher &mdash; Autonomous Navigation &amp; Privacy-Preserving ML</div>
+            <span class="entry-meta">Intelligent Service Integration Lab, KAIST &middot; Aug 2021 &ndash; Jun 2025</span>
+            <p class="entry-body">DeepILS, NanoMST, ConvXformer; multi-camera Vision Transformer for BEV detection at 25 FPS; FPGA SLAM accelerator.</p>
+        </div>
+
+        <div class="mtimeline-item">
+            <div class="entry-title">Research Intern &mdash; Mobile Robotics, SLAM &amp; Multi-Sensor Fusion</div>
+            <span class="entry-meta">DAIM Lab, KAIST &middot; Nov 2023 &ndash; Mar 2024</span>
+            <p class="entry-body">SLAM navigation (LiDAR, IMU, wheel odometry) for an industrial AMR; met warehouse positioning SLA of &lt;5&thinsp;cm error.</p>
+        </div>
+
+        <div class="mtimeline-item">
+            <div class="entry-title">Senior Manager &mdash; SoC Design, FPGA &amp; AI Accelerators</div>
+            <span class="entry-meta">National Electronics Complex (NECOP), Pakistan &middot; Apr 2019 &ndash; May 2022</span>
+            <p class="entry-body">SoC/RTL verification (SystemVerilog/UVM); tape-out on first silicon pass for two production AI accelerator designs.</p>
+        </div>
+
+        <div class="mtimeline-item">
+            <div class="entry-title">Assistant Manager &mdash; Satellite Systems, FPGA &amp; Signal Processing</div>
+            <span class="entry-meta">National Space Agency (SUPARCO), Pakistan &middot; Oct 2014 &ndash; Apr 2019</span>
+            <p class="entry-body">Radiation-tolerant FPGA DSP systems; AI-accelerated image compression; Distinguished Service Award (2018).</p>
+        </div>
+
     </div>
+</section>
 
-    <!-- Research Focus Cards -->
-    <h2 class="text-center mb-4">Research Focus Areas</h2>
-    <div class="row mb-5">
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-                <div class="bg-primary text-white text-center py-3 card-img-top">
-                    <i class="fas fa-car fa-3x"></i>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">3D Autonomous Perception</h4>
-                    <p class="card-text">Multi-camera BEV architectures, monocular depth estimation, transformer-based 3D object detection, and multi-sensor fusion for autonomous driving. Deployed on NVIDIA Jetson Orin in sub-30 ms.</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <div class="text-center">
-                        <span class="badge badge-pill badge-primary px-2 py-1 mr-1">BEV</span>
-                        <span class="badge badge-pill badge-primary px-2 py-1 mr-1">MonoDETR</span>
-                        <span class="badge badge-pill badge-primary px-2 py-1">Multi-Sensor Fusion</span>
-                    </div>
-                </div>
+<section class="site-section mb-5">
+    <h2 class="section-heading">Certifications</h2>
+    <ul class="entry-list">
+        <li class="entry">
+            <div class="entry-row">
+                <div class="entry-title">Machine Learning</div>
+                <div class="entry-meta">2020</div>
             </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-                <div class="bg-success text-white text-center py-3 card-img-top">
-                    <i class="fas fa-robot fa-3x"></i>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">VLA Models &amp; Embodied AI</h4>
-                    <p class="card-text">Vision-Language-Action models for grounded robot autonomy, knowledge distillation for edge VLA deployment, and closed-loop VLA policy validation in Isaac Sim and CARLA.</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <div class="text-center">
-                        <span class="badge badge-pill badge-success px-2 py-1 mr-1">VLA</span>
-                        <span class="badge badge-pill badge-success px-2 py-1 mr-1">Isaac Sim</span>
-                        <span class="badge badge-pill badge-success px-2 py-1">Sim-to-Real</span>
-                    </div>
-                </div>
+            <div class="entry-sub">Stanford University (Coursera)</div>
+        </li>
+        <li class="entry">
+            <div class="entry-row">
+                <div class="entry-title">Op-Amp Layout Design (180nm BCD)</div>
+                <div class="entry-meta">2021</div>
             </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-                <div class="bg-info text-white text-center py-3 card-img-top">
-                    <i class="fas fa-microchip fa-3x"></i>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Efficient Edge AI</h4>
-                    <p class="card-text">PTQ/QAT INT8–FP16 quantization, TensorRT/ONNX deployment, knowledge distillation, and LoRA/PEFT for real-time AI inference on NVIDIA Jetson Orin under tight power budgets.</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <div class="text-center">
-                        <span class="badge badge-pill badge-info px-2 py-1 mr-1">TensorRT</span>
-                        <span class="badge badge-pill badge-info px-2 py-1 mr-1">INT8</span>
-                        <span class="badge badge-pill badge-info px-2 py-1">TinyML</span>
-                    </div>
-                </div>
+            <div class="entry-sub">LUMS, Pakistan</div>
+        </li>
+        <li class="entry">
+            <div class="entry-row">
+                <div class="entry-title">SoC Verification</div>
+                <div class="entry-meta">2021</div>
             </div>
-        </div>
-    </div>
-
-    <!-- Featured Publications -->
-    <h2 class="text-center mb-4">Featured Publications</h2>
-    <div class="row mb-5">
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-                <div class="card-body">
-                    <h5 class="card-title text-primary" style="font-size:0.95rem;">ADP-QFed: Privacy-Preserving Quantized Federated Learning</h5>
-                    <p class="card-subtitle mb-2 text-muted small"><strong>Omer Tariq</strong>, M. Bilal, D. Han</p>
-                    <p class="card-text small">Adaptive differential privacy + quantized federated learning for distributed edge intelligence.</p>
-                    <p class="mb-0"><span class="badge badge-primary" style="font-size:0.7rem;">IEEE IoT Journal — IF 8.9</span> <span class="badge badge-secondary">2025</span></p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://doi.org/10.1109/JIOT.2025.3634475" target="_blank" class="btn btn-sm btn-outline-primary">View Paper</a>
-                </div>
+            <div class="entry-sub">Udemy</div>
+        </li>
+        <li class="entry">
+            <div class="entry-row">
+                <div class="entry-title">Control of Mobile Robots</div>
+                <div class="entry-meta">2013</div>
             </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-                <div class="card-body">
-                    <h5 class="card-title text-primary" style="font-size:0.95rem;">NanoMST: Hardware-Aware Multiscale Transformer for TinyML</h5>
-                    <p class="card-subtitle mb-2 text-muted small"><strong>Omer Tariq</strong>, D. Han</p>
-                    <p class="card-text small">298K-param transformer — 4.7× compute reduction over LSTM, real-time on embedded hardware.</p>
-                    <p class="mb-0"><span class="badge badge-primary" style="font-size:0.7rem;">IEEE IoT Journal — IF 8.9</span> <span class="badge badge-secondary">2025</span></p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://doi.org/10.1109/JIOT.2025.3583906" target="_blank" class="btn btn-sm btn-outline-primary">View Paper</a>
-                </div>
+            <div class="entry-sub">Georgia Tech (Coursera)</div>
+        </li>
+        <li class="entry">
+            <div class="entry-row">
+                <div class="entry-title">Digital Signal Processing</div>
+                <div class="entry-meta">2013</div>
             </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-                <div class="card-body">
-                    <h5 class="card-title text-primary" style="font-size:0.95rem;">DeepILS: Domain-Invariant Inertial Localization System</h5>
-                    <p class="card-subtitle mb-2 text-muted small"><strong>Omer Tariq</strong>, B. Dastagir, M. Bilal, D. Han</p>
-                    <p class="card-text small">Sub-meter accuracy across diverse environments without environment-specific retraining.</p>
-                    <p class="mb-0"><span class="badge badge-primary" style="font-size:0.7rem;">IEEE IoT Journal — IF 8.9</span> <span class="badge badge-secondary">2025</span></p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                    <a href="https://doi.org/10.1109/JIOT.2025.3538938" target="_blank" class="btn btn-sm btn-outline-primary">View Paper</a>
-                </div>
+            <div class="entry-sub">EPFL (Coursera)</div>
+        </li>
+        <li class="entry">
+            <div class="entry-row">
+                <div class="entry-title">Advanced Computer Networks</div>
+                <div class="entry-meta">2013</div>
             </div>
-        </div>
-    </div>
-
-    <!-- Professional Timeline -->
-    <h2 class="text-center mb-4">Professional Journey</h2>
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card border-0 shadow-lg rounded-lg">
-                <div class="card-body p-0">
-                    <div class="timeline-container py-4">
-
-                        <div class="timeline-block">
-                            <div class="timeline-icon bg-primary">
-                                <i class="fas fa-robot text-white"></i>
-                            </div>
-                            <div class="timeline-content shadow-sm">
-                                <h5>Research Scientist — Embodied AI &amp; 3D Perception</h5>
-                                <p class="text-muted"><a href="https://www.neubility.co.kr/en" target="_blank">Neubility</a>, Seoul (Aug 2025 – Present)</p>
-                                <p>Multi-camera 3D perception; 8× inference speedup via TensorRT INT8/FP16; VLA policy validation in Isaac Sim &amp; CARLA.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-block">
-                            <div class="timeline-icon bg-info">
-                                <i class="fas fa-cloud text-white"></i>
-                            </div>
-                            <div class="timeline-content shadow-sm">
-                                <h5>Machine Learning Engineer</h5>
-                                <p class="text-muted">Monitra, UK (Feb 2025 – Sep 2025)</p>
-                                <p>15% robustness gain + 8× throughput; Azure Kubernetes MLOps pipeline; diffusion-model data augmentation.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-block">
-                            <div class="timeline-icon bg-success">
-                                <i class="fas fa-graduation-cap text-white"></i>
-                            </div>
-                            <div class="timeline-content shadow-sm">
-                                <h5>Ph.D. Candidate</h5>
-                                <p class="text-muted">KAIST, South Korea (Aug 2021 – Jun 2025)</p>
-                                <p>DeepILS, NanoMST, ConvXformer; multi-camera Vision Transformer for BEV detection at 25 FPS; FPGA SLAM accelerator.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-block">
-                            <div class="timeline-icon bg-primary">
-                                <i class="fas fa-microchip text-white"></i>
-                            </div>
-                            <div class="timeline-content shadow-sm">
-                                <h5>Senior Manager — SoC &amp; AI Accelerators</h5>
-                                <p class="text-muted">NECOP, Pakistan (Apr 2019 – May 2022)</p>
-                                <p>SoC/RTL verification (SystemVerilog/UVM); tape-out on first silicon pass for custom AI accelerator designs.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-block">
-                            <div class="timeline-icon bg-primary">
-                                <i class="fas fa-satellite text-white"></i>
-                            </div>
-                            <div class="timeline-content shadow-sm">
-                                <h5>Assistant Manager — Satellite Systems</h5>
-                                <p class="text-muted">SUPARCO, Pakistan (Oct 2014 – Apr 2019)</p>
-                                <p>Radiation-tolerant FPGA DSP systems; AI-accelerated image compression; Distinguished Service Award (2018).</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Certifications -->
-    <h2 class="text-center mb-4">Professional Certifications</h2>
-    <div class="row mb-5">
-        <div class="col-12">
-            <div class="card border-0 shadow-lg">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <div class="certification-card text-center p-4 h-100 border rounded">
-                                <div class="cert-icon mb-3"><i class="fas fa-brain fa-3x text-primary"></i></div>
-                                <h5>Machine Learning</h5>
-                                <p class="mb-2">Stanford University (Coursera)</p>
-                                <div class="cert-year badge badge-primary px-3 py-2">2020</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="certification-card text-center p-4 h-100 border rounded">
-                                <div class="cert-icon mb-3"><i class="fas fa-microchip fa-3x text-primary"></i></div>
-                                <h5>Op-Amp Layout Design (180nm BCD)</h5>
-                                <p class="mb-2">LUMS, Pakistan</p>
-                                <div class="cert-year badge badge-primary px-3 py-2">2021</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="certification-card text-center p-4 h-100 border rounded">
-                                <div class="cert-icon mb-3"><i class="fas fa-robot fa-3x text-primary"></i></div>
-                                <h5>Control of Mobile Robots</h5>
-                                <p class="mb-2">Georgia Tech (Coursera)</p>
-                                <div class="cert-year badge badge-primary px-3 py-2">2013</div>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center mt-3">
-                            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#moreCertifications" aria-expanded="false" aria-controls="moreCertifications">
-                                View More Certifications <i class="fas fa-chevron-down ml-1"></i>
-                            </button>
-                        </div>
-                        <div class="collapse mt-4 w-100" id="moreCertifications">
-                            <div class="row">
-                                <div class="col-md-4 mb-4">
-                                    <div class="certification-card text-center p-4 h-100 border rounded">
-                                        <div class="cert-icon mb-3"><i class="fas fa-microchip fa-3x text-primary"></i></div>
-                                        <h5>SoC Verification</h5>
-                                        <p class="mb-2">Udemy</p>
-                                        <div class="cert-year badge badge-primary px-3 py-2">2021</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="certification-card text-center p-4 h-100 border rounded">
-                                        <div class="cert-icon mb-3"><i class="fas fa-wave-square fa-3x text-primary"></i></div>
-                                        <h5>Digital Signal Processing</h5>
-                                        <p class="mb-2">EPFL (Coursera)</p>
-                                        <div class="cert-year badge badge-primary px-3 py-2">2013</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="certification-card text-center p-4 h-100 border rounded">
-                                        <div class="cert-icon mb-3"><i class="fas fa-network-wired fa-3x text-primary"></i></div>
-                                        <h5>Advanced Computer Networks</h5>
-                                        <p class="mb-2">University of Washington (Coursera)</p>
-                                        <div class="cert-year badge badge-primary px-3 py-2">2013</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-.bg-primary { background-color: #19375f !important; }
-.text-primary { color: #19375f !important; }
-.badge-primary { background-color: #19375f; }
-.btn-outline-primary { color: #19375f; border-color: #19375f; }
-.btn-outline-primary:hover { background-color: #19375f; color: white; }
-
-.timeline-container {
-    position: relative; width: 90%; max-width: 1170px; margin: 0 auto;
-}
-.timeline-container::before {
-    content: ''; position: absolute; top: 0; left: 50px;
-    height: 100%; width: 4px; background: #e9ecef;
-}
-.timeline-block { position: relative; margin: 2em 0; }
-.timeline-block:after { content: ""; display: table; clear: both; }
-.timeline-icon {
-    width: 40px; height: 40px; border-radius: 50%;
-    box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
-    position: absolute; left: 30px; top: 0; display: flex; align-items: center; justify-content: center;
-}
-.timeline-content {
-    position: relative; margin-left: 90px; background: white;
-    border-radius: 0.25em; padding: 1.5em;
-}
-.timeline-content::before {
-    content: ''; position: absolute; top: 16px; right: 100%;
-    height: 0; width: 0; border: 10px solid transparent; border-right: 10px solid white;
-}
-.hover-card { transition: all 0.3s ease; }
-.hover-card:hover { transform: translateY(-8px); box-shadow: 0 1rem 2.5rem rgba(0,0,0,.15) !important; }
-.certification-card { transition: all 0.3s ease; background-color: white; }
-.certification-card:hover { transform: translateY(-5px); box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15) !important; }
-.progress-bar { transition: width 1.5s ease-in-out; }
-.bg-gradient-primary { background: linear-gradient(135deg, #19375f, #2a5298); }
-</style>
-
-<script>
-$(document).ready(function() {
-    $('.progress-bar').each(function() {
-        var width = $(this).attr('aria-valuenow') + '%';
-        $(this).css('width', '0%').animate({width: width}, 1500);
-    });
-});
-</script>
+            <div class="entry-sub">University of Washington (Coursera)</div>
+        </li>
+    </ul>
+</section>

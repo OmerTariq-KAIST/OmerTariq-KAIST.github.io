@@ -1,67 +1,469 @@
-/* Custom styles for Omer Tariq's website */
+/* ============================================================================
+   Omer Tariq — personal site
+   Minimal, typography-first design system.
+   Single accent color, hairline dividers, no card chrome / colored pills.
+   ============================================================================ */
 
-/* Primary colors — deep navy, professional academic/research tone */
 :root {
-    --primary-color: #19375f;
-    --primary-hover: #122848;
-    --secondary-color: #2a7a4b;
-    --accent-color: #c0392b;
-    --light-bg: #f4f6f9;
-    --dark-text: #1a1a2e;
-    --medium-text: #4a4a6a;
-    --light-text: #8a8aaa;
+    --ink: #14161c;
+    --ink-2: #444a56;
+    --ink-3: #767c8a;
+    --line: #e6e8ec;
+    --line-strong: #d5d9e0;
+    --surface: #ffffff;
+    --surface-alt: #f7f8fa;
+    --accent: #19375f;
+    --accent-hover: #0f2340;
 }
 
-/* Layout widening */
+* { box-sizing: border-box; }
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+    background-color: var(--surface);
+    color: var(--ink);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.68;
+    padding-top: 4.25rem;
+}
+
+/* Layout width — narrower than the theme default so text doesn't sprawl */
 .container-lg {
-    max-width: 1300px !important;
+    max-width: 980px !important;
 }
 
 .container-xl {
-    max-width: 1500px !important;
+    max-width: 1180px !important;
 }
 
-/* Typography improvements */
-body {
-    color: var(--dark-text);
-    line-height: 1.6;
-    font-size: 1.05rem;
-}
-
+/* ── Typography ─────────────────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-    color: var(--dark-text);
+    color: var(--ink);
+    letter-spacing: -0.01em;
 }
 
-h1 {
-    font-size: 2.5rem;
+h1 { font-size: 1.9rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 1.05rem; }
+
+p { color: var(--ink-2); }
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+
+.text-muted { color: var(--ink-3) !important; }
+
+/* ── Page header (replaces card-title / gradient hero patterns) ──────────── */
+.page-kicker {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
 }
 
-h2 {
-    font-size: 2rem;
+.page-header {
+    padding: 2.2rem 0 1.4rem;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 2.2rem;
 }
 
-h3 {
-    font-size: 1.75rem;
+.page-header h1 { margin-bottom: 0.5rem; }
+
+.page-lede {
+    font-size: 1.02rem;
+    color: var(--ink-2);
+    max-width: 46em;
+    margin-bottom: 0;
 }
 
-h4 {
-    font-size: 1.5rem;
+/* ── Section pattern: uppercase tracked label + hairline rule ────────────── */
+.site-section { border-top: 1px solid var(--ink); padding-top: 0.85rem; }
+
+.section-heading {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
 }
 
-.text-profile-bio {
-    font-size: 1.1rem;
+.section-note {
+    font-size: 0.82rem;
+    color: var(--ink-3);
+    margin-bottom: 1rem;
+}
+
+/* Sub-heading used inside a section body (e.g. a research theme title) */
+.entry-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+}
+
+/* ── Generic list row: title / meta / body / tags ─────────────────────────
+   Used for publications, projects, research themes, timeline entries. */
+.entry-list { list-style: none; margin: 0; padding: 0; }
+
+.entry {
+    padding: 1.05rem 0;
+    border-bottom: 1px solid var(--line);
+}
+.entry:first-child { padding-top: 0; }
+.entry:last-child { border-bottom: none; }
+
+.entry-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.entry-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.45;
+}
+
+.entry-meta {
+    font-size: 0.82rem;
+    color: var(--ink-3);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.entry-sub {
+    font-size: 0.85rem;
+    color: var(--ink-3);
+    margin-top: 1px;
+}
+
+.entry-sub strong { color: var(--ink-2); font-weight: 600; }
+
+.entry-body {
+    font-size: 0.88rem;
+    color: var(--ink-2);
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+/* Larger variant for statement-style prose (e.g. Research page themes) */
+.entry-body-lg {
+    font-size: 0.96rem;
+    color: var(--ink-2);
     line-height: 1.7;
+    margin-top: 6px;
+    max-width: 46em;
 }
 
-/* Logo sizes */
-.inline-badge {
-    height: 20px !important;
-    vertical-align: -10%;
-    margin-right: 5px;
-    line-break: unset;
+/* Plain text tags — no pills, separated by middot */
+.tag-line {
+    font-size: 0.78rem;
+    color: var(--ink-3);
+    margin-top: 5px;
+    letter-spacing: 0.01em;
+}
+.tag-line .sep { margin: 0 0.4em; color: var(--line-strong); }
+
+/* Inline text links used as [pdf] [code] [arxiv] affordances */
+.link-line { margin-top: 6px; font-size: 0.82rem; }
+.link-line a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+}
+.link-line a:hover { border-bottom-color: var(--accent); }
+
+/* Status label (Accepted / Under Review / Poster) — text, not a colored pill */
+.status-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+}
+
+/* ── Minimal buttons (replace Bootstrap filled buttons) ───────────────────── */
+.btn-minimal {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+}
+.btn-minimal:hover { border-color: var(--accent); background: var(--surface-alt); }
+
+/* ── Navbar ────────────────────────────────────────────────────────────────
+   Thin hairline bar, underline active/hover indicator instead of pill fill. */
+.navbar {
+    background-color: rgba(255,255,255,0.96) !important;
+    border-bottom: 1px solid var(--line);
+    box-shadow: none !important;
+    backdrop-filter: saturate(180%) blur(6px);
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--ink) !important;
+    letter-spacing: -0.01em;
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--ink-2) !important;
+    padding: 0.4rem 0.85rem !important;
+    position: relative;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-link:hover {
+    color: var(--ink) !important;
+}
+
+.navbar-nav .nav-item.active .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.15rem;
+    height: 2px;
+    background: var(--accent);
+}
+
+/* ── Footer ────────────────────────────────────────────────────────────────*/
+.footer {
+    margin-top: 4rem;
+    padding: 1.4rem 0 2.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.8rem;
+    color: var(--ink-3);
+}
+
+/* ── Logo sizes ────────────────────────────────────────────────────────── */
+.inline-badge {
+    height: 18px !important;
+    vertical-align: -10%;
+    margin-right: 5px;
+    line-break: unset;
+    opacity: 0.85;
+}
+
+/* ============================================================================
+   Home page
+   ============================================================================ */
+.profile-photo {
+    width: 152px;
+    height: 178px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 0.9rem;
+}
+
+.profile-link {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--ink-2);
+    text-decoration: none;
+    padding: 2px 0;
+}
+.profile-link:hover { color: var(--accent); }
+.profile-link i { width: 16px; text-align: center; margin-right: 5px; color: var(--ink-3); }
+
+.profile-name {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2rem;
+    color: var(--ink);
+}
+
+.profile-title {
+    font-size: 0.95rem;
+    color: var(--ink-3);
+    margin-bottom: 1.1rem;
+    line-height: 1.5;
+}
+.profile-title a { color: var(--ink-2); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+.profile-title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.profile-bio {
+    font-size: 0.94rem;
+    line-height: 1.72;
+    color: var(--ink-2);
+    margin-bottom: 0.7rem;
+}
+.profile-bio a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.profile-bio a:hover { border-bottom-color: var(--accent); }
+.profile-bio strong { color: var(--ink); font-weight: 600; }
+
+/* Citation metrics strip */
+.stat-row {
+    display: flex;
+    gap: 2rem;
+    margin: 1.1rem 0 0.3rem;
+}
+.stat-item { text-align: left; }
+.stat-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: 0.72rem;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Education line — plain text, not pill badges */
+.edu-line { margin-top: 0.9rem; font-size: 0.84rem; color: var(--ink-3); }
+.edu-line .edu-item { color: var(--ink-2); }
+.edu-line .edu-item img { height: 14px; width: auto; margin-right: 5px; vertical-align: -2px; opacity: 0.8; }
+.edu-line .sep { margin: 0 0.55em; color: var(--line-strong); }
+
+/* News table */
+.news-table { width: 100%; border-collapse: collapse; }
+.news-table tr { border-bottom: 1px solid var(--line); }
+.news-table tr:last-child { border-bottom: none; }
+.news-date {
+    font-size: 0.78rem;
+    white-space: nowrap;
+    padding: 7px 14px 7px 0;
+    vertical-align: top;
+    min-width: 68px;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+}
+.news-text {
+    font-size: 0.86rem;
+    padding: 7px 0;
+    color: var(--ink-2);
+    line-height: 1.55;
+}
+
+/* Publication items on home (compact variant of .entry) */
+.pub-item { padding: 13px 0; border-bottom: 1px solid var(--line); }
+.pub-item:last-of-type { border-bottom: none; }
+.pub-title { font-size: 0.92rem; font-weight: 600; color: var(--ink); line-height: 1.45; margin-bottom: 3px; }
+.pub-authors { font-size: 0.81rem; color: var(--ink-3); margin-bottom: 2px; }
+.pub-venue { font-size: 0.81rem; color: var(--accent); margin-bottom: 4px; }
+.pub-abstract { font-size: 0.8rem; color: var(--ink-3); line-height: 1.55; margin-bottom: 4px; }
+.pub-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+.pub-link { font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; border-bottom: 1px solid transparent; }
+.pub-link:hover { border-bottom-color: var(--accent); }
+
+.honors-list, .service-list { list-style: none; padding: 0; margin: 0; }
+.honors-list li {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 0.84rem; padding: 6px 0; border-bottom: 1px solid var(--line); gap: 8px;
+}
+.honors-list li:last-child { border-bottom: none; }
+.honor-name { color: var(--ink-2); }
+.honor-year { font-size: 0.76rem; color: var(--ink-3); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+.service-list li { font-size: 0.83rem; color: var(--ink-2); padding: 4px 0; }
+
+/* ============================================================================
+   Publications page — poster viewer (SAD-LoRA ICML poster)
+   ============================================================================ */
+.poster-thumb-wrap {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+}
+
+.poster-thumb-wrap .poster-thumb-img { transition: transform 0.4s ease; }
+.poster-thumb-wrap:hover .poster-thumb-img { transform: scale(1.06); }
+
+.poster-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    background: linear-gradient(180deg, rgba(20, 22, 28, 0) 45%, rgba(20, 22, 28, 0.82) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.poster-thumb-wrap:hover .poster-thumb-overlay { opacity: 1; }
+.poster-thumb-overlay span { color: #fff; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.02em; }
+
+.poster-modal-dialog { max-width: 820px; }
+.poster-modal-header { background-color: var(--ink); color: #fff; border-bottom: none; }
+.poster-modal-header .close { opacity: 0.7; }
+.poster-modal-header .close:hover { opacity: 1; }
+.poster-modal-body { background-color: var(--surface-alt); max-height: 82vh; overflow-y: auto; }
+.poster-modal-img { width: 100%; height: auto; display: block; }
+
+/* ============================================================================
+   Skill tags (Showcase / Research) — plain grouped text, no percentage bars
+   ============================================================================ */
+.skill-group { margin-bottom: 1.3rem; }
+.skill-group:last-child { margin-bottom: 0; }
+.skill-group-title {
+    font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--ink-3); margin-bottom: 0.5rem;
+}
+.skill-tags { font-size: 0.88rem; color: var(--ink-2); line-height: 1.9; }
+.skill-tags .sep { margin: 0 0.5em; color: var(--line-strong); }
+
+/* ── Minimal timeline (Showcase career history) ───────────────────────────── */
+.mtimeline { position: relative; padding-left: 1.1rem; border-left: 1px solid var(--line); }
+.mtimeline-item { position: relative; padding-bottom: 1.6rem; }
+.mtimeline-item:last-child { padding-bottom: 0; }
+.mtimeline-item::before {
+    content: ""; position: absolute; left: -1.35rem; top: 0.3rem;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+}
+.mtimeline-item .entry-title { margin-bottom: 1px; }
+.mtimeline-item .entry-meta { display: block; margin-bottom: 4px; }
+
+/* Publications page — sticky "on this page" side nav (Bootstrap scrollspy target) */
+#navbar-categories nav a {
+    color: var(--ink-3);
+    text-decoration: none;
+    padding: 2px 0;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+}
+#navbar-categories nav a.active {
+    color: var(--ink);
+    font-weight: 600;
+    border-left-color: var(--accent);
+}
+
+@media (max-width: 767px) {
+    .stat-row { gap: 1.4rem; }
+    .entry-row { flex-direction: column; align-items: flex-start; gap: 2px; }
 }
